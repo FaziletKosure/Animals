@@ -96,6 +96,22 @@ It sounds complicated at first, but after some practice you'll find it's not so 
   console.assert(return_val === 'tour', "wu-1: return_val === " + return_val);
 };
 ```
+* My solution [on pytut -wu-1](http://www.pythontutor.com/javascript.html#code=function%20a_word%28_1,%20_2,%20_3,%20_4%29%20%7B%20%0A%20%20%0A%20%20function%20tour%28_a,%20_b,%20_c,%20_d%29%20%7B%0A%20%20%20%20return%20_b%20%2B%20_a%20%2B%20_c%20%2B%20_d%3B%0A%20%20%7D%0A%20%20var%20word%20%3D%20tour%28_1,%20_2,%20_3,%20_4/*%20fill%20this%20in%20*/%29%3B%0A%0A%20%20var%20result%20%3D%20word%3B%0A%20%20return%20result%3B%0A%7D%0Aconst%20return_val%20%3D%20a_word%28%22o%22,%20%22t%22,%20%22u%22,%20%22r%22%29%3B%0Aconsole.assert%28return_val%20%3D%3D%3D%20'tour',%20%22wu-1%3A%20return_val%20%3D%3D%3D%20%22%20%2B%20return_val%29%3B&curInstr=8&mode=display&origin=opt-frontend.js&py=js&rawInputLstJSON=%5B%5D)
+```js
+function a_word(_1, _2, _3, _4) { 
+  
+  function tour(_a, _b, _c, _d) {
+    return _b + _a + _c + _d;
+  }
+  var word = tour(_1, _2, _3, _4/* fill this in */);
+
+  var result = word;
+  return result;
+}
+const return_val = a_word("o", "t", "u", "r");
+console.assert(return_val === 'tour', "wu-1: return_val === " + return_val);
+```
+---
 
 ### Tour 2
 
@@ -116,9 +132,20 @@ It sounds complicated at first, but after some practice you'll find it's not so 
   console.assert(return_val === 'tour', "wu-2: return_val === " + return_val);
 };
 ```
-* My solution [on pytut -wu-2]()
+* My solution [on pytut -wu-2](http://www.pythontutor.com/live.html#code=function%20a_word%28_1,%20_2,%20_3,%20_4%29%20%7B%20%0A%20%20%0A%20%20function%20tour%28_a,%20_b,%20_c,%20_d%29%20%7B%0A%20%20%20%20return%20_c%20%2B%20_a%20%2B%20_d%20%2B%20_b%3B%0A%20%20%7D%0A%20%20var%20word%20%3D%20tour%28_2,%20_4,%20_1,%20_3/*%20fill%20this%20in%20*/%29%3B%0A%0A%20%20var%20result%20%3D%20word%3B%0A%20%20return%20result%3B%0A%7D%0Aconst%20return_val%20%3D%20a_word%28%22t%22,%20%22o%22,%20%22u%22,%20%22r%22%20/*%20fill%20this%20in%20*/%29%3B%0Aconsole.assert%28return_val%20%3D%3D%3D%20'tour',%20%22wu-2%3A%20return_val%20%3D%3D%3D%20%22%20%2B%20return_val%29%3B&cumulative=false&curInstr=8&heapPrimitives=nevernest&mode=display&origin=opt-live.js&py=js&rawInputLstJSON=%5B%5D&textReferences=false)
 ```js
+function a_word(_1, _2, _3, _4) { 
+  
+  function tour(_a, _b, _c, _d) {
+    return _c + _a + _d + _b;
+  }
+  var word = tour(_2, _4, _1, _3/* fill this in */);
 
+  var result = word;
+  return result;
+}
+const return_val = a_word("t", "o", "u", "r" /* fill this in */);
+console.assert(return_val === 'tour', "wu-2: return_val === " + return_val);
 ```
 
 [TOP](#sentences)
