@@ -137,6 +137,11 @@ console.assert(return_val === 'turtle', "3: return_val === " + return_val);
   console.assert(return_val_2 === 'turtle', "4: return_val_2 === " + return_val_2);
 };
 ```
+* My solution [on pytut-4]()
+```js
+
+```
+---
 
 ### 5
 
@@ -166,6 +171,11 @@ console.assert(return_val === 'turtle', "3: return_val === " + return_val);
   console.assert(return_val_6 === 'turtle', "5: return_val_6 === " + return_val_6);
 };
 ```
+* My solution [on pytut-5]()
+```js
+
+```
+---
 
 ### 6
 
@@ -180,6 +190,11 @@ console.assert(return_val === 'turtle', "3: return_val === " + return_val);
   console.assert(return_val === 'turtle', "6: return_val === " + return_val);
 };
 ```
+* My solution [on pytut-6]()
+```js
+
+```
+---
 
 ### 7
 
@@ -194,6 +209,11 @@ console.assert(return_val === 'turtle', "3: return_val === " + return_val);
   console.assert(return_val === 'turtle', "7: return_val === " + return_val);
 };
 ```
+* My solution [on pytut-7]()
+```js
+
+```
+---
 
 ### 8 
 
@@ -210,6 +230,11 @@ console.assert(return_val === 'turtle', "3: return_val === " + return_val);
   console.assert(return_val === 'turtle', "8: return_val === " + return_val);
 };
 ```
+* My solution [on pytut-8]()
+```js
+
+```
+---
 
 ### 9
 
@@ -228,6 +253,11 @@ console.assert(return_val === 'turtle', "3: return_val === " + return_val);
   console.assert(return_val === 'turtle', "9: return_val === " + return_val);
 };
 ```
+* My solution [on pytut-9]()
+```js
+
+```
+---
 
 ___
 ___
