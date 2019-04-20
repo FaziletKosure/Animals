@@ -116,6 +116,10 @@ It sounds complicated at first, but after some practice you'll find it's not so 
   console.assert(return_val === 'tour', "wu-2: return_val === " + return_val);
 };
 ```
+* My solution [on pytut -wu-2]()
+```js
+
+```
 
 [TOP](#sentences)
 
@@ -152,6 +156,11 @@ It sounds complicated at first, but after some practice you'll find it's not so 
   console.assert(return_val === 'eat ate tea', "1: return_val === " + return_val);
 };
 ```
+* My solution [on pytut -1]()
+```js
+
+```
+---
 
 ### 2 
 
@@ -182,6 +191,11 @@ It sounds complicated at first, but after some practice you'll find it's not so 
   console.assert(return_val === 'eat ate tea', "2: return_val === " + return_val);
 };
 ```
+* My solution [on pytut -2]()
+```js
+
+```
+---
 
 ### 3
 
@@ -207,6 +221,11 @@ It sounds complicated at first, but after some practice you'll find it's not so 
   console.assert(return_val === 'space capes', "3: return_val === " + return_val);
 };
 ```
+* My solution [on pytut -3]()
+```js
+
+```
+---
 
 ### 4
 
@@ -232,6 +251,11 @@ It sounds complicated at first, but after some practice you'll find it's not so 
   console.assert(return_val === 'space capes', "4: return_val === " + return_val);
 };
 ```
+* My solution [on pytut -4]()
+```js
+
+```
+---
 
 ### 5
 
@@ -257,6 +281,11 @@ It sounds complicated at first, but after some practice you'll find it's not so 
   console.assert(return_val === 'cruel ulcer', "5: return_val === " + return_val);
 };
 ```
+* My solution [on pytut -5]()
+```js
+
+```
+---
 
 ### 6
 
@@ -282,6 +311,11 @@ It sounds complicated at first, but after some practice you'll find it's not so 
   console.assert(return_val === 'cruel ulcer', "6: return_val === " + return_val);
 };
 ```
+* My solution [on pytut -6]()
+```js
+
+```
+---
 
 ### 7
 
@@ -308,6 +342,11 @@ It sounds complicated at first, but after some practice you'll find it's not so 
 };
 ```
 
+* My solution [on pytut -7]()
+```js
+
+```
+---
 
 
 
