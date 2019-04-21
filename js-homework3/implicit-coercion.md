@@ -278,6 +278,64 @@ It's your turn.  In this exercise you'll write your own replication of the == op
   }
 }
 ```
+* # My solution[on pytut](http://www.pythontutor.com/live.html#code=/*%20your%20function%20must%20pass%20all%20of%20these%20tests%0A%20%20%0A%20%20null,%20undefined%20%20%20%20%20%20%20%20%20%20%20%20-%3E%20%20%20true%0A%20%20undefined,%20null%20%20%20%20%20%20%20%20%20%20%20%20-%3E%20%20%20true%0A%20%20null,%20null%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20-%3E%20%20%20true%0A%20%20undefined,%20undefined%20%20%20%20%20%20%20-%3E%20%20%20true%0A%20%20null,%20%28anything%20else%29%20%20%20%20%20%20-%3E%20%20%20false%0A%20%20undefined,%20%28anything%20else%29%20-%3E%20%20%20false%0A%20%20%0A%20%20true,%20false%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20-%3E%20%20%20%20false%0A%20%20false,%20false%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20-%3E%20%20%20%20true%0A%20%203,%203%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20-%3E%20%20%20%20true%0A%20%203.0,%203%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20-%3E%20%20%20%20true%0A%20%20%2B0,%20-0%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20-%3E%20%20%20%20true%0A%20%20%22%5Ct%22,%20'%5Ct'%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20-%3E%20%20%20%20true%0A%20%20-3,%20%2B3%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20-%3E%20%20%20%20false%0A%20%20%20%20%20%20%20%0A%20%203,%20%223%22%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20-%3E%20%20%20%20true%0A%20%20%223%22,%203%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20-%3E%20%20%20%20true%0A%20%20%223,%20%223%22%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20-%3E%20%20%20%20true%0A%20%20true,%201%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20-%3E%20%20%20%20true%0A%20%20false,%200%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20-%3E%20%20%20%20true%0A%20%20false,%20%22%22%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20-%3E%20%20%20%20true%0A%20%200,%20%22%22%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20-%3E%20%20%20%20true%0A%20%20%22e%22,%20true%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20-%3E%20%20%20%20false%0A%20%20undefined,%20%22%22%20%20%20%20%20%20%20%20%20%20%20%20%20%20-%3E%20%20%20%20false%0A*/%0A%0Aconst%20a%20%3D%20null%20,%20b%20%3D%203%3B%0A%0Aconst%20native%20%3D%20a%20%3D%3D%20b%3B%0Aconst%20replication%20%3D%20loose_equality%28a,%20b%29%3B%0A%0Aconsole.assert%28native%20%3D%3D%3D%20replication,%20%22replication%20%3D%3D%3D%20%22%20%2B%20replication%29%3B%0A%0Afunction%20loose_equality%28x,%20y%29%20%7B%20%0A%20%20//%20if%20both%20a%20and%20b%20are%20null%20or%20undefined,%20return%20true%0A%20%20if%28%28a%3D%3Dnull%26%26b%3D%3Dnull%29%7C%7C%28a%3D%3Dundefined%26%26b%3D%3Dundefined%29%29%7B%0A%20%20%20%20return%20true%3B%0A%20%20%7D%0A%20%20//%20if%20only%20one%20is%20null%20or%20undefined,%20return%20false%0Aif%28a%3D%3Dnull%7C%7Cb%3D%3Dundefined%29%7B%0A%20%20%20%20return%20false%3B%0A%20%20%7D%0A%20%20//%20if%20both%20arguments%20are%20the%20same%20type%20%28num,%20string,%20or%20bool%29%0A%20%20//%20%20compare%20them%20with%20%3D%3D%3D%20and%20return%20the%20result%0A%20%20if%20%28typeof%20a%20%3D%3D%20%22string%22%20%7C%7C%20typeof%20b%20%3D%3D%20%22string%22%29%20%7B%0A%20%20%20%20var%20a_coerced%20%3D%20String%28a%29%3B%0A%20%20%20%20var%20b_coerced%20%3D%20String%28b%29%3B%0A%20%20%7D%20else%20%7B%0A%20%20%20%20var%20a_coerced%20%3D%20Number%28a%29%3B%0A%20%20%20%20var%20b_coerced%20%3D%20Number%28b%29%3B%0A%20%20%20%20return%20a%3D%3D%3Db%3B%0A%20%20%7D%0A%7D&cumulative=false&curInstr=8&heapPrimitives=nevernest&mode=display&origin=opt-live.js&py=js&rawInputLstJSON=%5B%5D&textReferences=false)
+```js
+/* your function must pass all of these tests
+  
+  null, undefined            ->   true
+  undefined, null            ->   true
+  null, null                 ->   true
+  undefined, undefined       ->   true
+  null, (anything else)      ->   false
+  undefined, (anything else) ->   false
+  
+  true, false                ->    false
+  false, false               ->    true
+  3, 3                       ->    true
+  3.0, 3                     ->    true
+  +0, -0                     ->    true
+  "\t", '\t'                 ->    true
+  -3, +3                     ->    false
+       
+  3, "3"                     ->    true
+  "3", 3                     ->    true
+  "3, "3"                    ->    true
+  true, 1                    ->    true
+  false, 0                   ->    true
+  false, ""                  ->    true
+  0, ""                      ->    true
+  "e", true                  ->    false
+  undefined, ""              ->    false
+*/
+
+const a = null , b = 3;
+
+const native = a == b;
+const replication = loose_equality(a, b);
+
+console.assert(native === replication, "replication === " + replication);
+
+function loose_equality(x, y) { 
+  // if both a and b are null or undefined, return true
+  if((a==null&&b==null)||(a==undefined&&b==undefined)){
+    return true;
+  }
+  // if only one is null or undefined, return false
+if(a==null||b==undefined){
+    return false;
+  }
+  // if both arguments are the same type (num, string, or bool)
+  //  compare them with === and return the result
+  if (typeof a == "string" || typeof b == "string") {
+    var a_coerced = String(a);
+    var b_coerced = String(b);
+  } else {
+    var a_coerced = Number(a);
+    var b_coerced = Number(b);
+    return a===b;
+  }
+}
+```
 
 [TOP](#implicit-coercion)
 
