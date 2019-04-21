@@ -132,7 +132,29 @@ function plus(x, y) {
   console.assert(native_plus === replication, replication);
 }
 ```
+* # My solution
+```js
+/* test cases          : fill in the correct results
+    "3", 3, 3           -> ?"333" string
+    3, "3", 3           -> ?"333" string
+    3, 3, "3"           -> ?"63" string
+    "", true, false     -> ?"truefalse" string
+    true, false, ""     -> ?"1" string
+    null, 0, ""         -> ? "0" string
+    "", 0, null         -> ?"0null" string
+    undefined, 0, true  -> ?NaN number
+  */
+  const a = , b = , c = ;
+  const typeof_a = typeof a;
+  const typeof_b = typeof b;
+  const typeof_c = typeof c;
+  
+  const native_plus = a + b + c; // left to right
+  const replication = plus( plus(a, b), c);
 
+  console.assert(native_plus === replication, replication);
+```
+---
 
 ### a + (b + c)
 
