@@ -76,7 +76,36 @@ function plus(x, y) {
   console.assert(native_plus === replication, replication);
 }
 ```
+* # My solution
+```js
+{
+  /* test cases      : fill in the correct results
+    null, undefined -> ?NaN number
+    "3", 3          -> ?"33" string
+    3, "3"          -> ?"33" string
+    "3", "e"        -> ?"3e" string
+    3, "e"          -> ?"3e"string
+    "", 0           -> ?"0" string
+    undefined, 4    -> ?NaN number
+    true, false     -> ?1 number
+    true, "false"   -> ? "truefalse" string
+    null, false     -> ? 0 number
+    1, null         -> ? 1 number
+    null, ""        -> ? "null" string
+  */
 
+
+  const a =  , b = ;
+  const typeof_a = typeof a;
+  const typeof_b = typeof b;
+
+  const native_plus = a + b;
+  const replication = plus(a, b);
+
+  console.assert(native_plus === replication, replication);
+}
+```
+---
 ### a plus b plus c
 
 [on pytut](http://www.pythontutor.com/live.html#code=%0A/*%20test%20cases%20%20%20%20%20%20%20%20%20%20%3A%20fill%20in%20the%20correct%20results%0A%20%20%223%22,%203,%203%20%20%20%20%20%20%20%20%20%20%20-%3E%20%3F%0A%20%203,%20%223%22,%203%20%20%20%20%20%20%20%20%20%20%20-%3E%20%3F%0A%20%203,%203,%20%223%22%20%20%20%20%20%20%20%20%20%20%20-%3E%20%3F%0A%20%20%22%22,%20true,%20false%20%20%20%20%20-%3E%20%3F%0A%20%20true,%20false,%20%22%22%20%20%20%20%20-%3E%20%3F%0A%20%20null,%200,%20%22%22%20%20%20%20%20%20%20%20%20-%3E%20%3F%0A%20%20%22%22,%200,%20null%20%20%20%20%20%20%20%20%20-%3E%20%3F%0A%20%20undefined,%200,%20true%20%20-%3E%20%3F%0A*/%0Aconst%20a%20%3D%20,%20b%20%3D%20,%20c%20%3D%20%3B%0Aconst%20typeof_a%20%3D%20typeof%20a%3B%0Aconst%20typeof_b%20%3D%20typeof%20b%3B%0Aconst%20typeof_c%20%3D%20typeof%20c%3B%0A%0Aconst%20native_plus%20%3D%20a%20%2B%20b%20%2B%20c%3B%20//%20left%20to%20right%0Aconst%20replication%20%3D%20plus%28%20plus%28a,%20b%29,%20c%29%3B%0A%0Aconsole.assert%28native_plus%20%3D%3D%3D%20replication,%20replication%29%3B%0A%0Afunction%20plus%28x,%20y%29%20%7B%0A%20%20%0A%20%20if%20%28typeof%20x%20%3D%3D%3D%20%22string%22%20%7C%7C%20typeof%20y%20%3D%3D%3D%20%22string%22%29%20%7B%0A%20%20%20%20var%20x_coerced%20%3D%20String%28x%29%3B%0A%20%20%20%20var%20y_coerced%20%3D%20String%28y%29%3B%0A%20%20%7D%20else%20%7B%0A%20%20%20%20var%20x_coerced%20%3D%20Number%28x%29%3B%0A%20%20%20%20var%20y_coerced%20%3D%20Number%28y%29%3B%0A%20%20%7D%3B%0A%0A%20%20return%20x_coerced%20%2B%20y_coerced%3B%0A%7D&cumulative=false&curInstr=0&heapPrimitives=nevernest&mode=display&origin=opt-live.js&py=js&rawInputLstJSON=%5B%5D&textReferences=false)
