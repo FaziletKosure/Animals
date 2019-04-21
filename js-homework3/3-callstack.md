@@ -336,9 +336,25 @@ console.assert(return_val === 'space capes', "3: return_val === " + return_val);
   console.assert(return_val === 'space capes', "4: return_val === " + return_val);
 };
 ```
-* My solution [on pytut -4]()
+* My solution [on pytut -4](http://www.pythontutor.com/live.html#code=function%20sentence%28_1,%20_2,%20_3,%20_4,%20_5%29%20%7B%20%0A%0A%20%20function%20space%28_v,%20_w,%20_x,%20_y,%20_z%29%20%7B%0A%20%20%20%20return%20_v%20%2B%20_w%20%2B%20_x%20%2B%20_y%20%2B%20_z%3B%0A%20%20%7D%0A%20%20var%20word_1%20%3D%20space%28_3,%20_4,%20_1,%20_5,%20_2%29%3B%0A%0A%20%20function%20capes%28_v,%20_w,%20_x,%20_y,%20_z%29%20%7B%0A%20%20%20%20return%20_v%20%2B%20_w%20%2B%20_x%20%2B%20_y%20%2B%20_z%3B%0A%20%20%7D%0A%20%20var%20word_2%20%3D%20capes%28_5,%20_1,%20_4,%20_2,%20_3/*%20fill%20this%20in%20*/%29%3B%0A%0A%20%20var%20result%20%3D%20word_1%20%2B%20%22%20%22%20%2B%20word_2%3B%0A%20%20return%20result%3B%0A%7D%0Aconst%20return_val%20%3D%20sentence%28%22a%22,%20%22e%22,%20%22s%22,%20%22p%22,%20%22c%22/*%20fill%20this%20in%20*/%29%3B%0Aconsole.assert%28return_val%20%3D%3D%3D%20'space%20capes',%20%224%3A%20return_val%20%3D%3D%3D%20%22%20%2B%20return_val%29%3B&cumulative=false&curInstr=11&heapPrimitives=nevernest&mode=display&origin=opt-live.js&py=js&rawInputLstJSON=%5B%5D&textReferences=false)
 ```js
+function sentence(_1, _2, _3, _4, _5) { 
 
+  function space(_v, _w, _x, _y, _z) {
+    return _v + _w + _x + _y + _z;
+  }
+  var word_1 = space(_3, _4, _1, _5, _2);
+
+  function capes(_v, _w, _x, _y, _z) {
+    return _v + _w + _x + _y + _z;
+  }
+  var word_2 = capes(_5, _1, _4, _2, _3/* fill this in */);
+
+  var result = word_1 + " " + word_2;
+  return result;
+}
+const return_val = sentence("a", "e", "s", "p", "c"/* fill this in */);
+console.assert(return_val === 'space capes', "4: return_val === " + return_val);
 ```
 ---
 
