@@ -183,9 +183,30 @@ console.assert(return_val === 'tour', "wu-2: return_val === " + return_val);
   console.assert(return_val === 'eat ate tea', "1: return_val === " + return_val);
 };
 ```
-* My solution [on pytut -1]()
+* My solution [on pytut -1](http://www.pythontutor.com/live.html#code=function%20sentence%28_1,%20_2,%20_3%29%20%7B%20%0A%20%20%0A%20%20function%20eat%28_x,%20_y,%20_z%29%20%7B%0A%20%20%20%20return%20_x%20%2B%20_y%20%2B%20_z%3B%0A%20%20%7D%0A%20%20var%20word_1%20%3D%20eat%28_2,%20_1,_3/*%20fill%20this%20in%20*/%29%3B%0A%0A%20%20function%20ate%28_x,%20_y,%20_z%29%20%7B%0A%20%20%20%20return%20_x%20%2B%20_y%20%2B%20_z%3B%0A%20%20%7D%0A%20%20var%20word_2%20%3D%20ate%28_1,%20_3,%20_2%29%3B%0A%0A%20%20function%20tea%28_x,%20_y,%20_z%29%20%7B%0A%20%20%20%20return%20_x%20%2B%20_y%20%2B%20_1%3B%0A%20%20%7D%0A%20%20var%20word_3%20%3D%20tea%28_3,%20_2/*%20fill%20this%20in%20*/%29%3B%0A%0A%20%20var%20result%20%3D%20word_1%20%2B%20%22%20%22%20%2B%20word_2%20%2B%20%22%20%22%20%2B%20word_3%3B%0A%20%20return%20result%3B%0A%7D%0Aconst%20return_val%20%3D%20sentence%28%22a%22,%20%22e%22,%20%22t%22%29%3B%0Aconsole.assert%28return_val%20%3D%3D%3D%20'eat%20ate%20tea',%20%221%3A%20return_val%20%3D%3D%3D%20%22%20%2B%20return_val%29%3B&cumulative=false&curInstr=14&heapPrimitives=nevernest&mode=display&origin=opt-live.js&py=js&rawInputLstJSON=%5B%5D&textReferences=false)
 ```js
+function sentence(_1, _2, _3) { 
+  
+  function eat(_x, _y, _z) {
+    return _x + _y + _z;
+  }
+  var word_1 = eat(_2, _1,_3/* fill this in */);
 
+  function ate(_x, _y, _z) {
+    return _x + _y + _z;
+  }
+  var word_2 = ate(_1, _3, _2);
+
+  function tea(_x, _y, _z) {
+    return _x + _y + _1;
+  }
+  var word_3 = tea(_3, _2/* fill this in */);
+
+  var result = word_1 + " " + word_2 + " " + word_3;
+  return result;
+}
+const return_val = sentence("a", "e", "t");
+console.assert(return_val === 'eat ate tea', "1: return_val === " + return_val);
 ```
 ---
 
