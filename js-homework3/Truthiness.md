@@ -34,6 +34,198 @@ a: -Infinity  --> ?
 a: -3         --> ?
 a: -0.0       --> ?
 ```
+* # My solution[on pytut](http://www.pythontutor.com/javascript.html#code=/*%0Aa%3A%20true%20%20%20%20%20%20%20--%3E%20%3F%0Aa%3A%20false%20%20%20%20%20%20--%3E%20%3F%0Aa%3A%200%20%20%20%20%20%20%20%20%20%20--%3E%20%3F%0Aa%3A%201%20%20%20%20%20%20%20%20%20%20%20--%3E%20%3F%0Aa%3A%20null%20%20%20%20%20%20%20--%3E%20%3F%0Aa%3A%20undefined%20%20--%3E%20%3F%0Aa%3A%20''%20%20%20%20%20%20%20%20%20--%3E%20%3F%0Aa%3A%20'%20'%20%20%20%20%20%20%20%20--%3E%20%3F%0Aa%3A%20'tiil'%20%20%20%20%20--%3E%20%3F%0Aa%3A%202%20%20%20%20%20%20%20%20%20%20--%3E%20%3F%0Aa%3A%20345%20%20%20%20%20%20%20%20--%3E%20%3F%0Aa%3A%20NaN%20%20%20%20%20%20%20%20--%3E%20%3F%0Aa%3A%20Infinity%20%20%20--%3E%20%3F%0Aa%3A%20-Infinity%20%20--%3E%20%3F%0Aa%3A%20-3%20%20%20%20%20%20%20%20%20--%3E%20%3F%0Aa%3A%20-0.0%20%20%20%20%20%20%20--%3E%20%3F%0A*/%0Aconst%20x%20%3D%20true%20%3B%20//%20experiment%20with%20different%20values%20%0Aconst%20truthiness_x%20%3D%20Boolean%28x%29%3B%0A%0Alet%20result%3B%0Aif%20%28truthiness_x%29%20%7B%0A%20%20result%20%3D%20%22truthy%3A%20%22%20%2B%20typeof%20x%20%2B%20%22,%20%22%20%2B%20x%3B%0A%7D%20else%20%7B%0A%20%20result%20%3D%20%22falsey%3A%20%22%20%2B%20typeof%20x%20%2B%20%22,%20%22%20%2B%20x%3B%0A%7D%3B&curInstr=5&mode=display&origin=opt-frontend.js&py=js&rawInputLstJSON=%5B%5D)
+```js
+a: true       --> ? * # true
+
+const x = true ; // experiment with different values 
+const truthiness_x = Boolean(x);
+
+let result;
+if (truthiness_x) {
+  result = "truthy: " + typeof x + ", " + x;
+} else {
+  result = "falsey: " + typeof x + ", " + x;
+};
+// ---
+# Global frame
+x	true
+truthiness_x	true
+result	"truthy: boolean, true"
+---
+a: false      --> ? * # false
+const x = false ; // experiment with different values 
+const truthiness_x = Boolean(x);
+
+let result;
+if (truthiness_x) {
+  result = "truthy: " + typeof x + ", " + x;
+} else {
+  result = "falsey: " + typeof x + ", " + x;
+  //
+};
+---
+a: 0          --> ?
+
+const x = 0 ; // experiment with different values 
+const truthiness_x = Boolean(x);
+
+let result;
+if (truthiness_x) {
+  result = "truthy: " + typeof x + ", " + x;
+} else {
+  result = "falsey: " + typeof x + ", " + x;
+};
+
+---
+
+a: 1           --> ?
+const x = 1 ; // experiment with different values 
+const truthiness_x = Boolean(x);
+
+let result;
+if (truthiness_x) {
+  result = "truthy: " + typeof x + ", " + x;
+} else {
+  result = "falsey: " + typeof x + ", " + x;
+};
+---
+a: null       --> ?
+const x = null ; // experiment with different values 
+const truthiness_x = Boolean(x);
+
+let result;
+if (truthiness_x) {
+  result = "truthy: " + typeof x + ", " + x;
+} else {
+  result = "falsey: " + typeof x + ", " + x;
+};
+---
+a: undefined  --> ?
+
+const x = undefined ; // experiment with different values 
+const truthiness_x = Boolean(x);
+
+let result;
+if (truthiness_x) {
+  result = "truthy: " + typeof x + ", " + x;
+} else {
+  result = "falsey: " + typeof x + ", " + x;
+};
+---
+a: ''         --> ?
+const x = '' ; // experiment with different values 
+const truthiness_x = Boolean(x);
+
+let result;
+if (truthiness_x) {
+  result = "truthy: " + typeof x + ", " + x;
+} else {
+  result = "falsey: " + typeof x + ", " + x;
+};
+---
+a: ' '        --> ?
+
+const x = ' ' ; // experiment with different values 
+const truthiness_x = Boolean(x);
+
+let result;
+if (truthiness_x) {
+  result = "truthy: " + typeof x + ", " + x;
+} else {
+  result = "falsey: " + typeof x + ", " + x;
+};
+
+---
+a: 'tiil'     --> ?
+const x = 'tiil' ; // experiment with different values 
+const truthiness_x = Boolean(x);
+
+let result;
+if (truthiness_x) {
+  result = "truthy: " + typeof x + ", " + x;
+} else {
+  result = "falsey: " + typeof x + ", " + x;
+};
+---
+a: 2          --> ?
+const x = 2 ; // experiment with different values 
+const truthiness_x = Boolean(x);
+
+let result;
+if (truthiness_x) {
+  result = "truthy: " + typeof x + ", " + x;
+} else {
+  result = "falsey: " + typeof x + ", " + x;
+};
+---
+a: 345        --> ?
+const x = 345 ; // experiment with different values 
+const truthiness_x = Boolean(x);
+
+let result;
+if (truthiness_x) {
+  result = "truthy: " + typeof x + ", " + x;
+} else {
+  result = "falsey: " + typeof x + ", " + x;
+};
+---
+a: NaN        --> ?
+const x = NaN ; // experiment with different values 
+const truthiness_x = Boolean(x);
+
+let result;
+if (truthiness_x) {
+  result = "truthy: " + typeof x + ", " + x;
+} else {
+  result = "falsey: " + typeof x + ", " + x;
+};
+---
+a: Infinity   --> ?
+const x = Infinity ; // experiment with different values 
+const truthiness_x = Boolean(x);
+
+let result;
+if (truthiness_x) {
+  result = "truthy: " + typeof x + ", " + x;
+} else {
+  result = "falsey: " + typeof x + ", " + x;
+};
+---
+a: -Infinity  --> ?
+const x = -Infinity ; // experiment with different values 
+const truthiness_x = Boolean(x);
+
+let result;
+if (truthiness_x) {
+  result = "truthy: " + typeof x + ", " + x;
+} else {
+  result = "falsey: " + typeof x + ", " + x;
+};
+---
+a: -3         --> ?
+const x = -3 ; // experiment with different values 
+const truthiness_x = Boolean(x);
+
+let result;
+if (truthiness_x) {
+  result = "truthy: " + typeof x + ", " + x;
+} else {
+  result = "falsey: " + typeof x + ", " + x;
+};
+---
+a: -0.0       --> ?
+const x = true ; // experiment with different values 
+const truthiness_x = Boolean(x);
+
+let result;
+if (truthiness_x) {
+  result = "truthy: " + typeof x + ", " + x;
+} else {
+  result = "falsey: " + typeof x + ", " + x;
+};
+
+```
 
 This repo covers 4 important operators who's behavior is dependant on the _truthiness_ of their arguments.
 
