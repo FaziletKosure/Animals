@@ -493,82 +493,82 @@ const tern_numbers = (truthiness_x) ? 1 : 2 ;
 ### values to try: # a: null
 * My solution [on pytut](http://www.pythontutor.com/javascript.html#code=const%20x%20%3D%20null%20%3B%20//%20experiment%20with%20different%20values%20%0Aconst%20tern_value%20%3D%20%28x%29%20%3F%20%22truthy%22%20%3A%20%22falsey%22%20%3B%0A%0Aconst%20truthiness_x%20%3D%20Boolean%28x%29%3B%0A%0Aconst%20tern_truthiness%20%3D%20%28truthiness_x%29%20%3F%20%22truthy%22%20%3A%20%22falsey%22%20%3B%0Aconst%20tern_option%20%3D%20%28truthiness_x%29%20%3F%20%22first%22%20%3A%20%22second%22%20%3B%0Aconst%20tern_numbers%20%3D%20%28truthiness_x%29%20%3F%201%20%3A%202%20%3B%0A%20console.log%28%22x%3A%20%22%20%2B%20typeof%20x%20%2B%20%22,%20%22%20%2B%20x%29%3B%0A%20//%20console.log%28%22coerced%3A%20%22%20%2B%20coerce_truthiness%29%3B%0A%20%20//console.log%28%22ternaried%3A%20%22%20%2B%20ternary_truthiness%29%3B%0A%20%20console.log%28%22option%3A%20%22%20%2B%20tern_option%29%3B%0A%20%20console.log%28%22numbers%3A%20%22%20%2B%20tern_numbers%29%3B%0A%20%20console.log%28%22truthiness%3A%20%22%20%2B%20tern_truthiness%29%3B&curInstr=10&mode=display&origin=opt-frontend.js&py=js&rawInputLstJSON=%5B%5D)
 ```js
-a: null       --> ?
+a: null       --> ? * FALSE
 
 ```
 ---
 ### values to try: # a: undefined
 * My solution [on pytut](http://www.pythontutor.com/javascript.html#code=const%20x%20%3D%20undefined%20%3B%20//%20experiment%20with%20different%20values%20%0Aconst%20tern_value%20%3D%20%28x%29%20%3F%20%22truthy%22%20%3A%20%22falsey%22%20%3B%0A%0Aconst%20truthiness_x%20%3D%20Boolean%28x%29%3B%0A%0Aconst%20tern_truthiness%20%3D%20%28truthiness_x%29%20%3F%20%22truthy%22%20%3A%20%22falsey%22%20%3B%0Aconst%20tern_option%20%3D%20%28truthiness_x%29%20%3F%20%22first%22%20%3A%20%22second%22%20%3B%0Aconst%20tern_numbers%20%3D%20%28truthiness_x%29%20%3F%201%20%3A%202%20%3B%0A%20console.log%28%22x%3A%20%22%20%2B%20typeof%20x%20%2B%20%22,%20%22%20%2B%20x%29%3B%0A%20//%20console.log%28%22coerced%3A%20%22%20%2B%20coerce_truthiness%29%3B%0A%20%20//console.log%28%22ternaried%3A%20%22%20%2B%20ternary_truthiness%29%3B%0A%20%20console.log%28%22option%3A%20%22%20%2B%20tern_option%29%3B%0A%20%20console.log%28%22numbers%3A%20%22%20%2B%20tern_numbers%29%3B%0A%20%20console.log%28%22truthiness%3A%20%22%20%2B%20tern_truthiness%29%3B&curInstr=10&mode=display&origin=opt-frontend.js&py=js&rawInputLstJSON=%5B%5D)
 ```js
-a: undefined  --> ?
+a: undefined  --> ? * FALSE
 
 ```
 ---
 ### values to try: # a: ''
 * My solution [on pytut](http://www.pythontutor.com/javascript.html#code=const%20x%20%3D%20''%20%3B%20//%20experiment%20with%20different%20values%20%0Aconst%20tern_value%20%3D%20%28x%29%20%3F%20%22truthy%22%20%3A%20%22falsey%22%20%3B%0A%0Aconst%20truthiness_x%20%3D%20Boolean%28x%29%3B%0A%0Aconst%20tern_truthiness%20%3D%20%28truthiness_x%29%20%3F%20%22truthy%22%20%3A%20%22falsey%22%20%3B%0Aconst%20tern_option%20%3D%20%28truthiness_x%29%20%3F%20%22first%22%20%3A%20%22second%22%20%3B%0Aconst%20tern_numbers%20%3D%20%28truthiness_x%29%20%3F%201%20%3A%202%20%3B%0A%20console.log%28%22x%3A%20%22%20%2B%20typeof%20x%20%2B%20%22,%20%22%20%2B%20x%29%3B%0A%20//%20console.log%28%22coerced%3A%20%22%20%2B%20coerce_truthiness%29%3B%0A%20%20//console.log%28%22ternaried%3A%20%22%20%2B%20ternary_truthiness%29%3B%0A%20%20console.log%28%22option%3A%20%22%20%2B%20tern_option%29%3B%0A%20%20console.log%28%22numbers%3A%20%22%20%2B%20tern_numbers%29%3B%0A%20%20console.log%28%22truthiness%3A%20%22%20%2B%20tern_truthiness%29%3B&curInstr=10&mode=display&origin=opt-frontend.js&py=js&rawInputLstJSON=%5B%5D)
 ```js
-a: ''         --> ?
+a: ''         --> ? * FALSE
 ```
 ---
 ### values to try: # a: ' ' 
 * My solution [on pytut](http://www.pythontutor.com/javascript.html#code=const%20x%20%3D%20'%20'%20%3B%20//%20experiment%20with%20different%20values%20%0Aconst%20tern_value%20%3D%20%28x%29%20%3F%20%22truthy%22%20%3A%20%22falsey%22%20%3B%0A%0Aconst%20truthiness_x%20%3D%20Boolean%28x%29%3B%0A%0Aconst%20tern_truthiness%20%3D%20%28truthiness_x%29%20%3F%20%22truthy%22%20%3A%20%22falsey%22%20%3B%0Aconst%20tern_option%20%3D%20%28truthiness_x%29%20%3F%20%22first%22%20%3A%20%22second%22%20%3B%0Aconst%20tern_numbers%20%3D%20%28truthiness_x%29%20%3F%201%20%3A%202%20%3B%0A%20console.log%28%22x%3A%20%22%20%2B%20typeof%20x%20%2B%20%22,%20%22%20%2B%20x%29%3B%0A%20//%20console.log%28%22coerced%3A%20%22%20%2B%20coerce_truthiness%29%3B%0A%20%20//console.log%28%22ternaried%3A%20%22%20%2B%20ternary_truthiness%29%3B%0A%20%20console.log%28%22option%3A%20%22%20%2B%20tern_option%29%3B%0A%20%20console.log%28%22numbers%3A%20%22%20%2B%20tern_numbers%29%3B%0A%20%20console.log%28%22truthiness%3A%20%22%20%2B%20tern_truthiness%29%3B&curInstr=10&mode=display&origin=opt-frontend.js&py=js&rawInputLstJSON=%5B%5D)
 ```js
-a: ' '        --> ?
+a: ' '        --> ? * TRUE
 ```
 ---
 ### values to try: # a: 'tiil'
 * My solution [on pytut](http://www.pythontutor.com/javascript.html#code=const%20x%20%3D%20'tiil'%20%3B%20//%20experiment%20with%20different%20values%20%0Aconst%20tern_value%20%3D%20%28x%29%20%3F%20%22truthy%22%20%3A%20%22falsey%22%20%3B%0A%0Aconst%20truthiness_x%20%3D%20Boolean%28x%29%3B%0A%0Aconst%20tern_truthiness%20%3D%20%28truthiness_x%29%20%3F%20%22truthy%22%20%3A%20%22falsey%22%20%3B%0Aconst%20tern_option%20%3D%20%28truthiness_x%29%20%3F%20%22first%22%20%3A%20%22second%22%20%3B%0Aconst%20tern_numbers%20%3D%20%28truthiness_x%29%20%3F%201%20%3A%202%20%3B%0A%20console.log%28%22x%3A%20%22%20%2B%20typeof%20x%20%2B%20%22,%20%22%20%2B%20x%29%3B%0A%20//%20console.log%28%22coerced%3A%20%22%20%2B%20coerce_truthiness%29%3B%0A%20%20//console.log%28%22ternaried%3A%20%22%20%2B%20ternary_truthiness%29%3B%0A%20%20console.log%28%22option%3A%20%22%20%2B%20tern_option%29%3B%0A%20%20console.log%28%22numbers%3A%20%22%20%2B%20tern_numbers%29%3B%0A%20%20console.log%28%22truthiness%3A%20%22%20%2B%20tern_truthiness%29%3B&curInstr=10&mode=display&origin=opt-frontend.js&py=js&rawInputLstJSON=%5B%5D)
 ```js
-a: 'tiil'     --> ?
+a: 'tiil'     --> ? * TRUE
 
 ```
 ---
 ### values to try: # a: 2
 * My solution [on pytut](http://www.pythontutor.com/javascript.html#code=const%20x%20%3D%202%20%3B%20//%20experiment%20with%20different%20values%20%0Aconst%20tern_value%20%3D%20%28x%29%20%3F%20%22truthy%22%20%3A%20%22falsey%22%20%3B%0A%0Aconst%20truthiness_x%20%3D%20Boolean%28x%29%3B%0A%0Aconst%20tern_truthiness%20%3D%20%28truthiness_x%29%20%3F%20%22truthy%22%20%3A%20%22falsey%22%20%3B%0Aconst%20tern_option%20%3D%20%28truthiness_x%29%20%3F%20%22first%22%20%3A%20%22second%22%20%3B%0Aconst%20tern_numbers%20%3D%20%28truthiness_x%29%20%3F%201%20%3A%202%20%3B%0A%20console.log%28%22x%3A%20%22%20%2B%20typeof%20x%20%2B%20%22,%20%22%20%2B%20x%29%3B%0A%20//%20console.log%28%22coerced%3A%20%22%20%2B%20coerce_truthiness%29%3B%0A%20%20//console.log%28%22ternaried%3A%20%22%20%2B%20ternary_truthiness%29%3B%0A%20%20console.log%28%22option%3A%20%22%20%2B%20tern_option%29%3B%0A%20%20console.log%28%22numbers%3A%20%22%20%2B%20tern_numbers%29%3B%0A%20%20console.log%28%22truthiness%3A%20%22%20%2B%20tern_truthiness%29%3B&curInstr=10&mode=display&origin=opt-frontend.js&py=js&rawInputLstJSON=%5B%5D)
 ```js
-a: 2          --> ?
+a: 2          --> ? * TRUE
 
 ```
 ---
 ### values to try: # a: 345
 * My solution [on pytut](http://www.pythontutor.com/javascript.html#code=const%20x%20%3D%20345%20%3B%20//%20experiment%20with%20different%20values%20%0Aconst%20tern_value%20%3D%20%28x%29%20%3F%20%22truthy%22%20%3A%20%22falsey%22%20%3B%0A%0Aconst%20truthiness_x%20%3D%20Boolean%28x%29%3B%0A%0Aconst%20tern_truthiness%20%3D%20%28truthiness_x%29%20%3F%20%22truthy%22%20%3A%20%22falsey%22%20%3B%0Aconst%20tern_option%20%3D%20%28truthiness_x%29%20%3F%20%22first%22%20%3A%20%22second%22%20%3B%0Aconst%20tern_numbers%20%3D%20%28truthiness_x%29%20%3F%201%20%3A%202%20%3B%0A%20console.log%28%22x%3A%20%22%20%2B%20typeof%20x%20%2B%20%22,%20%22%20%2B%20x%29%3B%0A%20//%20console.log%28%22coerced%3A%20%22%20%2B%20coerce_truthiness%29%3B%0A%20%20//console.log%28%22ternaried%3A%20%22%20%2B%20ternary_truthiness%29%3B%0A%20%20console.log%28%22option%3A%20%22%20%2B%20tern_option%29%3B%0A%20%20console.log%28%22numbers%3A%20%22%20%2B%20tern_numbers%29%3B%0A%20%20console.log%28%22truthiness%3A%20%22%20%2B%20tern_truthiness%29%3B&curInstr=10&mode=display&origin=opt-frontend.js&py=js&rawInputLstJSON=%5B%5D)
 ```js
-a: 345        --> ?
+a: 345        --> ? * TRUE
 
 ```
 ---
 ### values to try: # a: NaN
 * My solution [on pytut](http://www.pythontutor.com/javascript.html#code=const%20x%20%3D%20NaN%20%3B%20//%20experiment%20with%20different%20values%20%0Aconst%20tern_value%20%3D%20%28x%29%20%3F%20%22truthy%22%20%3A%20%22falsey%22%20%3B%0A%0Aconst%20truthiness_x%20%3D%20Boolean%28x%29%3B%0A%0Aconst%20tern_truthiness%20%3D%20%28truthiness_x%29%20%3F%20%22truthy%22%20%3A%20%22falsey%22%20%3B%0Aconst%20tern_option%20%3D%20%28truthiness_x%29%20%3F%20%22first%22%20%3A%20%22second%22%20%3B%0Aconst%20tern_numbers%20%3D%20%28truthiness_x%29%20%3F%201%20%3A%202%20%3B%0A%20console.log%28%22x%3A%20%22%20%2B%20typeof%20x%20%2B%20%22,%20%22%20%2B%20x%29%3B%0A%20//%20console.log%28%22coerced%3A%20%22%20%2B%20coerce_truthiness%29%3B%0A%20%20//console.log%28%22ternaried%3A%20%22%20%2B%20ternary_truthiness%29%3B%0A%20%20console.log%28%22option%3A%20%22%20%2B%20tern_option%29%3B%0A%20%20console.log%28%22numbers%3A%20%22%20%2B%20tern_numbers%29%3B%0A%20%20console.log%28%22truthiness%3A%20%22%20%2B%20tern_truthiness%29%3B&curInstr=10&mode=display&origin=opt-frontend.js&py=js&rawInputLstJSON=%5B%5D)
 ```js
-a: NaN        --> ?
+a: NaN        --> ? * FALSE
 
 ```
 ---
 ### values to try: # a: Infinity 
 * My solution [on pytut](http://www.pythontutor.com/javascript.html#code=const%20x%20%3D%20Infinity%20%3B%20//%20experiment%20with%20different%20values%20%0Aconst%20tern_value%20%3D%20%28x%29%20%3F%20%22truthy%22%20%3A%20%22falsey%22%20%3B%0A%0Aconst%20truthiness_x%20%3D%20Boolean%28x%29%3B%0A%0Aconst%20tern_truthiness%20%3D%20%28truthiness_x%29%20%3F%20%22truthy%22%20%3A%20%22falsey%22%20%3B%0Aconst%20tern_option%20%3D%20%28truthiness_x%29%20%3F%20%22first%22%20%3A%20%22second%22%20%3B%0Aconst%20tern_numbers%20%3D%20%28truthiness_x%29%20%3F%201%20%3A%202%20%3B%0A%20console.log%28%22x%3A%20%22%20%2B%20typeof%20x%20%2B%20%22,%20%22%20%2B%20x%29%3B%0A%20//%20console.log%28%22coerced%3A%20%22%20%2B%20coerce_truthiness%29%3B%0A%20%20//console.log%28%22ternaried%3A%20%22%20%2B%20ternary_truthiness%29%3B%0A%20%20console.log%28%22option%3A%20%22%20%2B%20tern_option%29%3B%0A%20%20console.log%28%22numbers%3A%20%22%20%2B%20tern_numbers%29%3B%0A%20%20console.log%28%22truthiness%3A%20%22%20%2B%20tern_truthiness%29%3B&curInstr=10&mode=display&origin=opt-frontend.js&py=js&rawInputLstJSON=%5B%5D)
 ```js
-a: Infinity   --> ?
+a: Infinity   --> ? * TRUE
 
 ```
 ---
 ### values to try: # a: -Infinity
 * My solution [on pytut](http://www.pythontutor.com/javascript.html#code=const%20x%20%3D%20-Infinity%20%3B%20//%20experiment%20with%20different%20values%20%0Aconst%20tern_value%20%3D%20%28x%29%20%3F%20%22truthy%22%20%3A%20%22falsey%22%20%3B%0A%0Aconst%20truthiness_x%20%3D%20Boolean%28x%29%3B%0A%0Aconst%20tern_truthiness%20%3D%20%28truthiness_x%29%20%3F%20%22truthy%22%20%3A%20%22falsey%22%20%3B%0Aconst%20tern_option%20%3D%20%28truthiness_x%29%20%3F%20%22first%22%20%3A%20%22second%22%20%3B%0Aconst%20tern_numbers%20%3D%20%28truthiness_x%29%20%3F%201%20%3A%202%20%3B%0A%20console.log%28%22x%3A%20%22%20%2B%20typeof%20x%20%2B%20%22,%20%22%20%2B%20x%29%3B%0A%20//%20console.log%28%22coerced%3A%20%22%20%2B%20coerce_truthiness%29%3B%0A%20%20//console.log%28%22ternaried%3A%20%22%20%2B%20ternary_truthiness%29%3B%0A%20%20console.log%28%22option%3A%20%22%20%2B%20tern_option%29%3B%0A%20%20console.log%28%22numbers%3A%20%22%20%2B%20tern_numbers%29%3B%0A%20%20console.log%28%22truthiness%3A%20%22%20%2B%20tern_truthiness%29%3B&curInstr=10&mode=display&origin=opt-frontend.js&py=js&rawInputLstJSON=%5B%5D)
 ```js
-a: -Infinity  --> ?
+a: -Infinity  --> ? * TRUE
 
 ```
 ---
 ### values to try: # a: -3
 * My solution [on pytut](http://www.pythontutor.com/javascript.html#code=const%20x%20%3D%20-3%20%3B%20//%20experiment%20with%20different%20values%20%0Aconst%20tern_value%20%3D%20%28x%29%20%3F%20%22truthy%22%20%3A%20%22falsey%22%20%3B%0A%0Aconst%20truthiness_x%20%3D%20Boolean%28x%29%3B%0A%0Aconst%20tern_truthiness%20%3D%20%28truthiness_x%29%20%3F%20%22truthy%22%20%3A%20%22falsey%22%20%3B%0Aconst%20tern_option%20%3D%20%28truthiness_x%29%20%3F%20%22first%22%20%3A%20%22second%22%20%3B%0Aconst%20tern_numbers%20%3D%20%28truthiness_x%29%20%3F%201%20%3A%202%20%3B%0A%20console.log%28%22x%3A%20%22%20%2B%20typeof%20x%20%2B%20%22,%20%22%20%2B%20x%29%3B%0A%20//%20console.log%28%22coerced%3A%20%22%20%2B%20coerce_truthiness%29%3B%0A%20%20//console.log%28%22ternaried%3A%20%22%20%2B%20ternary_truthiness%29%3B%0A%20%20console.log%28%22option%3A%20%22%20%2B%20tern_option%29%3B%0A%20%20console.log%28%22numbers%3A%20%22%20%2B%20tern_numbers%29%3B%0A%20%20console.log%28%22truthiness%3A%20%22%20%2B%20tern_truthiness%29%3B&curInstr=10&mode=display&origin=opt-frontend.js&py=js&rawInputLstJSON=%5B%5D)
 ```js
-a: -3         --> ?
+a: -3         --> ? * TRUE
 
 ```
 ---
 ### values to try: # a: -0.0
 * My solution [on pytut](http://www.pythontutor.com/javascript.html#code=const%20x%20%3D%20-0.0%20%3B%20//%20experiment%20with%20different%20values%20%0Aconst%20tern_value%20%3D%20%28x%29%20%3F%20%22truthy%22%20%3A%20%22falsey%22%20%3B%0A%0Aconst%20truthiness_x%20%3D%20Boolean%28x%29%3B%0A%0Aconst%20tern_truthiness%20%3D%20%28truthiness_x%29%20%3F%20%22truthy%22%20%3A%20%22falsey%22%20%3B%0Aconst%20tern_option%20%3D%20%28truthiness_x%29%20%3F%20%22first%22%20%3A%20%22second%22%20%3B%0Aconst%20tern_numbers%20%3D%20%28truthiness_x%29%20%3F%201%20%3A%202%20%3B%0A%20console.log%28%22x%3A%20%22%20%2B%20typeof%20x%20%2B%20%22,%20%22%20%2B%20x%29%3B%0A%20//%20console.log%28%22coerced%3A%20%22%20%2B%20coerce_truthiness%29%3B%0A%20%20//console.log%28%22ternaried%3A%20%22%20%2B%20ternary_truthiness%29%3B%0A%20%20console.log%28%22option%3A%20%22%20%2B%20tern_option%29%3B%0A%20%20console.log%28%22numbers%3A%20%22%20%2B%20tern_numbers%29%3B%0A%20%20console.log%28%22truthiness%3A%20%22%20%2B%20tern_truthiness%29%3B&curInstr=10&mode=display&origin=opt-frontend.js&py=js&rawInputLstJSON=%5B%5D)
 ```js
-a: -0.0       --> ?
+a: -0.0       --> ? * FALSE
 ```
 
 
@@ -611,7 +611,159 @@ a: ' ', b:''          --> ?
 a: 2, b:3             --> ?
 a: 3, b:2             --> ?
 ```
+---
+### values to try: # a: true, b:false      
+* My solution [on pytut](http://www.pythontutor.com/javascript.html#code=/*%0Aa%3A%20true,%20b%3Afalse%20%20%20%20%20%20--%3E%20%3F%0Aa%3A%20false,%20b%3Atrue%20%20%20%20%20%20--%3E%20%3F%0Aa%3A%200,%20b%3A1%20%20%20%20%20%20%20%20%20%20%20%20%20--%3E%20%3F%0Aa%3A%201,%20b%3A0%20%20%20%20%20%20%20%20%20%20%20%20%20--%3E%20%3F%0Aa%3A%20null,%20b%3Afalse%20%20%20%20%20%20--%3E%20%3F%0Aa%3A%20false,%20b%3Anull%20%20%20%20%20%20--%3E%20%3F%0Aa%3A%20'',%20b%3A'%20'%20%20%20%20%20%20%20%20%20%20--%3E%20%3F%0Aa%3A%20'%20',%20b%3A''%20%20%20%20%20%20%20%20%20%20--%3E%20%3F%0Aa%3A%202,%20b%3A3%20%20%20%20%20%20%20%20%20%20%20%20%20--%3E%20%3F%0Aa%3A%203,%20b%3A2%20%20%20%20%20%20%20%20%20%20%20%20%20--%3E%20%3F%0A*/%0A%0Aconst%20a%20%3D%20true%20%3B%20//%20experiment%20with%20different%20values%20%0Aconst%20b%20%3D%20false%3B%20//%20experiment%20with%20different%20values%20%0A%0Aconst%20a_truthiness%20%3D%20Boolean%28a%29%20%2B%20%22y%22%3B%0Aconst%20b_truthiness%20%3D%20Boolean%28b%29%20%2B%20%22y%22%3B%0A%0Aconst%20and%20%3D%20a%20%26%26%20b%3B%0Aconst%20replication%20%3D%20%28a%29%20%3F%20b%20%3A%20a%20%3B&curInstr=6&mode=display&origin=opt-frontend.js&py=js&rawInputLstJSON=%5B%5D)
+```js
+a: true, b:false      --> ? *FALSE
+const a = true ; // experiment with different values 
+const b = false; // experiment with different values 
 
+const a_truthiness = Boolean(a) + "y";
+const b_truthiness = Boolean(b) + "y";
+
+const and = a && b;
+const replication = (a) ? b : a ;
+
+```
+---
+---
+### values to try: # a: false, b:true      
+* My solution [on pytut](http://www.pythontutor.com/javascript.html#code=/*%0Aa%3A%20true,%20b%3Afalse%20%20%20%20%20%20--%3E%20%3F%0Aa%3A%20false,%20b%3Atrue%20%20%20%20%20%20--%3E%20%3F%0Aa%3A%200,%20b%3A1%20%20%20%20%20%20%20%20%20%20%20%20%20--%3E%20%3F%0Aa%3A%201,%20b%3A0%20%20%20%20%20%20%20%20%20%20%20%20%20--%3E%20%3F%0Aa%3A%20null,%20b%3Afalse%20%20%20%20%20%20--%3E%20%3F%0Aa%3A%20false,%20b%3Anull%20%20%20%20%20%20--%3E%20%3F%0Aa%3A%20'',%20b%3A'%20'%20%20%20%20%20%20%20%20%20%20--%3E%20%3F%0Aa%3A%20'%20',%20b%3A''%20%20%20%20%20%20%20%20%20%20--%3E%20%3F%0Aa%3A%202,%20b%3A3%20%20%20%20%20%20%20%20%20%20%20%20%20--%3E%20%3F%0Aa%3A%203,%20b%3A2%20%20%20%20%20%20%20%20%20%20%20%20%20--%3E%20%3F%0A*/%0A%0Aconst%20a%20%3D%20false%20%3B%20//%20experiment%20with%20different%20values%20%0Aconst%20b%20%3D%20true%3B%20//%20experiment%20with%20different%20values%20%0A%0Aconst%20a_truthiness%20%3D%20Boolean%28a%29%20%2B%20%22y%22%3B%0Aconst%20b_truthiness%20%3D%20Boolean%28b%29%20%2B%20%22y%22%3B%0A%0Aconst%20and%20%3D%20a%20%26%26%20b%3B%0Aconst%20replication%20%3D%20%28a%29%20%3F%20b%20%3A%20a%20%3B&curInstr=6&mode=display&origin=opt-frontend.js&py=js&rawInputLstJSON=%5B%5D)
+```js
+a: false, b:true      --> ? * FALSE
+const a = false ; // experiment with different values 
+const b = true; // experiment with different values 
+
+const a_truthiness = Boolean(a) + "y";
+const b_truthiness = Boolean(b) + "y";
+
+const and = a && b;
+const replication = (a) ? b : a ;
+
+```
+---
+---
+### values to try: # a: 0, b:1             
+* My solution [on pytut](http://www.pythontutor.com/javascript.html#code=/*%0Aa%3A%20true,%20b%3Afalse%20%20%20%20%20%20--%3E%20%3F%0Aa%3A%20false,%20b%3Atrue%20%20%20%20%20%20--%3E%20%3F%0Aa%3A%200,%20b%3A1%20%20%20%20%20%20%20%20%20%20%20%20%20--%3E%20%3F%0Aa%3A%201,%20b%3A0%20%20%20%20%20%20%20%20%20%20%20%20%20--%3E%20%3F%0Aa%3A%20null,%20b%3Afalse%20%20%20%20%20%20--%3E%20%3F%0Aa%3A%20false,%20b%3Anull%20%20%20%20%20%20--%3E%20%3F%0Aa%3A%20'',%20b%3A'%20'%20%20%20%20%20%20%20%20%20%20--%3E%20%3F%0Aa%3A%20'%20',%20b%3A''%20%20%20%20%20%20%20%20%20%20--%3E%20%3F%0Aa%3A%202,%20b%3A3%20%20%20%20%20%20%20%20%20%20%20%20%20--%3E%20%3F%0Aa%3A%203,%20b%3A2%20%20%20%20%20%20%20%20%20%20%20%20%20--%3E%20%3F%0A*/%0A%0Aconst%20a%20%3D%200%20%3B%20//%20experiment%20with%20different%20values%20%0Aconst%20b%20%3D%201%3B%20//%20experiment%20with%20different%20values%20%0A%0Aconst%20a_truthiness%20%3D%20Boolean%28a%29%20%2B%20%22y%22%3B%0Aconst%20b_truthiness%20%3D%20Boolean%28b%29%20%2B%20%22y%22%3B%0A%0Aconst%20and%20%3D%20a%20%26%26%20b%3B%0Aconst%20replication%20%3D%20%28a%29%20%3F%20b%20%3A%20a%20%3B&curInstr=6&mode=display&origin=opt-frontend.js&py=js&rawInputLstJSON=%5B%5D)
+```js
+a: 0, b:1             --> ? * 0
+const a = 0 ; // experiment with different values 
+const b = 1; // experiment with different values 
+
+const a_truthiness = Boolean(a) + "y";
+const b_truthiness = Boolean(b) + "y";
+
+const and = a && b;
+const replication = (a) ? b : a ;
+```
+---
+---
+### values to try: # a: 1, b:0             
+* My solution [on pytut](http://www.pythontutor.com/javascript.html#code=/*%0Aa%3A%20true,%20b%3Afalse%20%20%20%20%20%20--%3E%20%3F%0Aa%3A%20false,%20b%3Atrue%20%20%20%20%20%20--%3E%20%3F%0Aa%3A%200,%20b%3A1%20%20%20%20%20%20%20%20%20%20%20%20%20--%3E%20%3F%0Aa%3A%201,%20b%3A0%20%20%20%20%20%20%20%20%20%20%20%20%20--%3E%20%3F%0Aa%3A%20null,%20b%3Afalse%20%20%20%20%20%20--%3E%20%3F%0Aa%3A%20false,%20b%3Anull%20%20%20%20%20%20--%3E%20%3F%0Aa%3A%20'',%20b%3A'%20'%20%20%20%20%20%20%20%20%20%20--%3E%20%3F%0Aa%3A%20'%20',%20b%3A''%20%20%20%20%20%20%20%20%20%20--%3E%20%3F%0Aa%3A%202,%20b%3A3%20%20%20%20%20%20%20%20%20%20%20%20%20--%3E%20%3F%0Aa%3A%203,%20b%3A2%20%20%20%20%20%20%20%20%20%20%20%20%20--%3E%20%3F%0A*/%0A%0Aconst%20a%20%3D%201%20%3B%20//%20experiment%20with%20different%20values%20%0Aconst%20b%20%3D%200%3B%20//%20experiment%20with%20different%20values%20%0A%0Aconst%20a_truthiness%20%3D%20Boolean%28a%29%20%2B%20%22y%22%3B%0Aconst%20b_truthiness%20%3D%20Boolean%28b%29%20%2B%20%22y%22%3B%0A%0Aconst%20and%20%3D%20a%20%26%26%20b%3B%0Aconst%20replication%20%3D%20%28a%29%20%3F%20b%20%3A%20a%20%3B&curInstr=6&mode=display&origin=opt-frontend.js&py=js&rawInputLstJSON=%5B%5D)
+```js
+a: 1, b:0             --> ? * 0
+const a = 1 ; // experiment with different values 
+const b = 0; // experiment with different values 
+
+const a_truthiness = Boolean(a) + "y";
+const b_truthiness = Boolean(b) + "y";
+
+const and = a && b;
+const replication = (a) ? b : a ;
+```
+---
+---
+### values to try: # a: null, b:false     
+* My solution [on pytut](http://www.pythontutor.com/javascript.html#code=/*%0Aa%3A%20true,%20b%3Afalse%20%20%20%20%20%20--%3E%20%3F%0Aa%3A%20false,%20b%3Atrue%20%20%20%20%20%20--%3E%20%3F%0Aa%3A%200,%20b%3A1%20%20%20%20%20%20%20%20%20%20%20%20%20--%3E%20%3F%0Aa%3A%201,%20b%3A0%20%20%20%20%20%20%20%20%20%20%20%20%20--%3E%20%3F%0Aa%3A%20null,%20b%3Afalse%20%20%20%20%20%20--%3E%20%3F%0Aa%3A%20false,%20b%3Anull%20%20%20%20%20%20--%3E%20%3F%0Aa%3A%20'',%20b%3A'%20'%20%20%20%20%20%20%20%20%20%20--%3E%20%3F%0Aa%3A%20'%20',%20b%3A''%20%20%20%20%20%20%20%20%20%20--%3E%20%3F%0Aa%3A%202,%20b%3A3%20%20%20%20%20%20%20%20%20%20%20%20%20--%3E%20%3F%0Aa%3A%203,%20b%3A2%20%20%20%20%20%20%20%20%20%20%20%20%20--%3E%20%3F%0A*/%0A%0Aconst%20a%20%3D%20null%20%3B%20//%20experiment%20with%20different%20values%20%0Aconst%20b%20%3D%20false%3B%20//%20experiment%20with%20different%20values%20%0A%0Aconst%20a_truthiness%20%3D%20Boolean%28a%29%20%2B%20%22y%22%3B%0Aconst%20b_truthiness%20%3D%20Boolean%28b%29%20%2B%20%22y%22%3B%0A%0Aconst%20and%20%3D%20a%20%26%26%20b%3B%0Aconst%20replication%20%3D%20%28a%29%20%3F%20b%20%3A%20a%20%3B&curInstr=6&mode=display&origin=opt-frontend.js&py=js&rawInputLstJSON=%5B%5D)
+```js
+a: null, b:false      --> ? * null
+const a = null ; // experiment with different values 
+const b = false; // experiment with different values 
+
+const a_truthiness = Boolean(a) + "y";
+const b_truthiness = Boolean(b) + "y";
+
+const and = a && b;
+const replication = (a) ? b : a ;
+```
+---
+---
+### values to try: # a: false, b:null      
+* My solution [on pytut](http://www.pythontutor.com/javascript.html#code=/*%0Aa%3A%20true,%20b%3Afalse%20%20%20%20%20%20--%3E%20%3F%0Aa%3A%20false,%20b%3Atrue%20%20%20%20%20%20--%3E%20%3F%0Aa%3A%200,%20b%3A1%20%20%20%20%20%20%20%20%20%20%20%20%20--%3E%20%3F%0Aa%3A%201,%20b%3A0%20%20%20%20%20%20%20%20%20%20%20%20%20--%3E%20%3F%0Aa%3A%20null,%20b%3Afalse%20%20%20%20%20%20--%3E%20%3F%0Aa%3A%20false,%20b%3Anull%20%20%20%20%20%20--%3E%20%3F%0Aa%3A%20'',%20b%3A'%20'%20%20%20%20%20%20%20%20%20%20--%3E%20%3F%0Aa%3A%20'%20',%20b%3A''%20%20%20%20%20%20%20%20%20%20--%3E%20%3F%0Aa%3A%202,%20b%3A3%20%20%20%20%20%20%20%20%20%20%20%20%20--%3E%20%3F%0Aa%3A%203,%20b%3A2%20%20%20%20%20%20%20%20%20%20%20%20%20--%3E%20%3F%0A*/%0A%0Aconst%20a%20%3D%20false%20%3B%20//%20experiment%20with%20different%20values%20%0Aconst%20b%20%3D%20null%3B%20//%20experiment%20with%20different%20values%20%0A%0Aconst%20a_truthiness%20%3D%20Boolean%28a%29%20%2B%20%22y%22%3B%0Aconst%20b_truthiness%20%3D%20Boolean%28b%29%20%2B%20%22y%22%3B%0A%0Aconst%20and%20%3D%20a%20%26%26%20b%3B%0Aconst%20replication%20%3D%20%28a%29%20%3F%20b%20%3A%20a%20%3B&curInstr=6&mode=display&origin=opt-frontend.js&py=js&rawInputLstJSON=%5B%5D)
+```js
+a: false, b:null      --> ? * false
+const a = false ; // experiment with different values 
+const b = null; // experiment with different values 
+
+const a_truthiness = Boolean(a) + "y";
+const b_truthiness = Boolean(b) + "y";
+
+const and = a && b;
+const replication = (a) ? b : a ;
+```
+---
+---
+### values to try: # a: '', b:' '          
+* My solution [on pytut](http://www.pythontutor.com/javascript.html#code=/*%0Aa%3A%20true,%20b%3Afalse%20%20%20%20%20%20--%3E%20%3F%0Aa%3A%20false,%20b%3Atrue%20%20%20%20%20%20--%3E%20%3F%0Aa%3A%200,%20b%3A1%20%20%20%20%20%20%20%20%20%20%20%20%20--%3E%20%3F%0Aa%3A%201,%20b%3A0%20%20%20%20%20%20%20%20%20%20%20%20%20--%3E%20%3F%0Aa%3A%20null,%20b%3Afalse%20%20%20%20%20%20--%3E%20%3F%0Aa%3A%20false,%20b%3Anull%20%20%20%20%20%20--%3E%20%3F%0Aa%3A%20'',%20b%3A'%20'%20%20%20%20%20%20%20%20%20%20--%3E%20%3F%0Aa%3A%20'%20',%20b%3A''%20%20%20%20%20%20%20%20%20%20--%3E%20%3F%0Aa%3A%202,%20b%3A3%20%20%20%20%20%20%20%20%20%20%20%20%20--%3E%20%3F%0Aa%3A%203,%20b%3A2%20%20%20%20%20%20%20%20%20%20%20%20%20--%3E%20%3F%0A*/%0A%0Aconst%20a%20%3D%20''%20%3B%20//%20experiment%20with%20different%20values%20%0Aconst%20b%20%3D%20'%20'%3B%20//%20experiment%20with%20different%20values%20%0A%0Aconst%20a_truthiness%20%3D%20Boolean%28a%29%20%2B%20%22y%22%3B%0Aconst%20b_truthiness%20%3D%20Boolean%28b%29%20%2B%20%22y%22%3B%0A%0Aconst%20and%20%3D%20a%20%26%26%20b%3B%0Aconst%20replication%20%3D%20%28a%29%20%3F%20b%20%3A%20a%20%3B&curInstr=6&mode=display&origin=opt-frontend.js&py=js&rawInputLstJSON=%5B%5D)
+```js
+a: '', b:' '          --> ? * ''
+const a = '' ; // experiment with different values 
+const b = ' '; // experiment with different values 
+
+const a_truthiness = Boolean(a) + "y";
+const b_truthiness = Boolean(b) + "y";
+
+const and = a && b;
+const replication = (a) ? b : a ;
+```
+---
+---
+### values to try: # a: ' ', b:''          
+* My solution [on pytut](http://www.pythontutor.com/javascript.html#code=/*%0Aa%3A%20true,%20b%3Afalse%20%20%20%20%20%20--%3E%20%3F%0Aa%3A%20false,%20b%3Atrue%20%20%20%20%20%20--%3E%20%3F%0Aa%3A%200,%20b%3A1%20%20%20%20%20%20%20%20%20%20%20%20%20--%3E%20%3F%0Aa%3A%201,%20b%3A0%20%20%20%20%20%20%20%20%20%20%20%20%20--%3E%20%3F%0Aa%3A%20null,%20b%3Afalse%20%20%20%20%20%20--%3E%20%3F%0Aa%3A%20false,%20b%3Anull%20%20%20%20%20%20--%3E%20%3F%0Aa%3A%20'',%20b%3A'%20'%20%20%20%20%20%20%20%20%20%20--%3E%20%3F%0Aa%3A%20'%20',%20b%3A''%20%20%20%20%20%20%20%20%20%20--%3E%20%3F%0Aa%3A%202,%20b%3A3%20%20%20%20%20%20%20%20%20%20%20%20%20--%3E%20%3F%0Aa%3A%203,%20b%3A2%20%20%20%20%20%20%20%20%20%20%20%20%20--%3E%20%3F%0A*/%0A%0Aconst%20a%20%3D%20'%20'%20%3B%20//%20experiment%20with%20different%20values%20%0Aconst%20b%20%3D%20''%3B%20//%20experiment%20with%20different%20values%20%0A%0Aconst%20a_truthiness%20%3D%20Boolean%28a%29%20%2B%20%22y%22%3B%0Aconst%20b_truthiness%20%3D%20Boolean%28b%29%20%2B%20%22y%22%3B%0A%0Aconst%20and%20%3D%20a%20%26%26%20b%3B%0Aconst%20replication%20%3D%20%28a%29%20%3F%20b%20%3A%20a%20%3B&curInstr=6&mode=display&origin=opt-frontend.js&py=js&rawInputLstJSON=%5B%5D)
+```js
+a: ' ', b:''          --> ? * ''
+const a = ' ' ; // experiment with different values 
+const b = ''; // experiment with different values 
+
+const a_truthiness = Boolean(a) + "y";
+const b_truthiness = Boolean(b) + "y";
+
+const and = a && b;
+const replication = (a) ? b : a ;
+```
+---
+
+---
+### values to try: # a: 2, b:3             
+* My solution [on pytut](http://www.pythontutor.com/javascript.html#code=/*%0Aa%3A%20true,%20b%3Afalse%20%20%20%20%20%20--%3E%20%3F%0Aa%3A%20false,%20b%3Atrue%20%20%20%20%20%20--%3E%20%3F%0Aa%3A%200,%20b%3A1%20%20%20%20%20%20%20%20%20%20%20%20%20--%3E%20%3F%0Aa%3A%201,%20b%3A0%20%20%20%20%20%20%20%20%20%20%20%20%20--%3E%20%3F%0Aa%3A%20null,%20b%3Afalse%20%20%20%20%20%20--%3E%20%3F%0Aa%3A%20false,%20b%3Anull%20%20%20%20%20%20--%3E%20%3F%0Aa%3A%20'',%20b%3A'%20'%20%20%20%20%20%20%20%20%20%20--%3E%20%3F%0Aa%3A%20'%20',%20b%3A''%20%20%20%20%20%20%20%20%20%20--%3E%20%3F%0Aa%3A%202,%20b%3A3%20%20%20%20%20%20%20%20%20%20%20%20%20--%3E%20%3F%0Aa%3A%203,%20b%3A2%20%20%20%20%20%20%20%20%20%20%20%20%20--%3E%20%3F%0A*/%0A%0Aconst%20a%20%3D%202%20%3B%20//%20experiment%20with%20different%20values%20%0Aconst%20b%20%3D%203%3B%20//%20experiment%20with%20different%20values%20%0A%0Aconst%20a_truthiness%20%3D%20Boolean%28a%29%20%2B%20%22y%22%3B%0Aconst%20b_truthiness%20%3D%20Boolean%28b%29%20%2B%20%22y%22%3B%0A%0Aconst%20and%20%3D%20a%20%26%26%20b%3B%0Aconst%20replication%20%3D%20%28a%29%20%3F%20b%20%3A%20a%20%3B&curInstr=6&mode=display&origin=opt-frontend.js&py=js&rawInputLstJSON=%5B%5D)
+```js
+a: 2, b:3             --> ? * 3
+const a = 2 ; // experiment with different values 
+const b = 3; // experiment with different values 
+
+const a_truthiness = Boolean(a) + "y";
+const b_truthiness = Boolean(b) + "y";
+
+const and = a && b;
+const replication = (a) ? b : a ;
+```
+---
+---
+### values to try: # a: 3, b:2             
+* My solution [on pytut](http://www.pythontutor.com/javascript.html#code=/*%0Aa%3A%20true,%20b%3Afalse%20%20%20%20%20%20--%3E%20%3F%0Aa%3A%20false,%20b%3Atrue%20%20%20%20%20%20--%3E%20%3F%0Aa%3A%200,%20b%3A1%20%20%20%20%20%20%20%20%20%20%20%20%20--%3E%20%3F%0Aa%3A%201,%20b%3A0%20%20%20%20%20%20%20%20%20%20%20%20%20--%3E%20%3F%0Aa%3A%20null,%20b%3Afalse%20%20%20%20%20%20--%3E%20%3F%0Aa%3A%20false,%20b%3Anull%20%20%20%20%20%20--%3E%20%3F%0Aa%3A%20'',%20b%3A'%20'%20%20%20%20%20%20%20%20%20%20--%3E%20%3F%0Aa%3A%20'%20',%20b%3A''%20%20%20%20%20%20%20%20%20%20--%3E%20%3F%0Aa%3A%202,%20b%3A3%20%20%20%20%20%20%20%20%20%20%20%20%20--%3E%20%3F%0Aa%3A%203,%20b%3A2%20%20%20%20%20%20%20%20%20%20%20%20%20--%3E%20%3F%0A*/%0A%0Aconst%20a%20%3D%203%20%3B%20//%20experiment%20with%20different%20values%20%0Aconst%20b%20%3D%202%3B%20//%20experiment%20with%20different%20values%20%0A%0Aconst%20a_truthiness%20%3D%20Boolean%28a%29%20%2B%20%22y%22%3B%0Aconst%20b_truthiness%20%3D%20Boolean%28b%29%20%2B%20%22y%22%3B%0A%0Aconst%20and%20%3D%20a%20%26%26%20b%3B%0Aconst%20replication%20%3D%20%28a%29%20%3F%20b%20%3A%20a%20%3B&curInstr=6&mode=display&origin=opt-frontend.js&py=js&rawInputLstJSON=%5B%5D)
+```js
+a: 3, b:2             --> ? * 2
+const a = 3 ; // experiment with different values 
+const b = 2; // experiment with different values 
+
+const a_truthiness = Boolean(a) + "y";
+const b_truthiness = Boolean(b) + "y";
+
+const and = a && b;
+const replication = (a) ? b : a ;
+```
+---
 [TOP](#truthiness)
 
 ---
