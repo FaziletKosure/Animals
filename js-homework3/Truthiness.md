@@ -36,7 +36,7 @@ a: -0.0       --> ?
 ```
 * # My solution[on pytut](http://www.pythontutor.com/javascript.html#code=/*%0Aa%3A%20true%20%20%20%20%20%20%20--%3E%20%3F%0Aa%3A%20false%20%20%20%20%20%20--%3E%20%3F%0Aa%3A%200%20%20%20%20%20%20%20%20%20%20--%3E%20%3F%0Aa%3A%201%20%20%20%20%20%20%20%20%20%20%20--%3E%20%3F%0Aa%3A%20null%20%20%20%20%20%20%20--%3E%20%3F%0Aa%3A%20undefined%20%20--%3E%20%3F%0Aa%3A%20''%20%20%20%20%20%20%20%20%20--%3E%20%3F%0Aa%3A%20'%20'%20%20%20%20%20%20%20%20--%3E%20%3F%0Aa%3A%20'tiil'%20%20%20%20%20--%3E%20%3F%0Aa%3A%202%20%20%20%20%20%20%20%20%20%20--%3E%20%3F%0Aa%3A%20345%20%20%20%20%20%20%20%20--%3E%20%3F%0Aa%3A%20NaN%20%20%20%20%20%20%20%20--%3E%20%3F%0Aa%3A%20Infinity%20%20%20--%3E%20%3F%0Aa%3A%20-Infinity%20%20--%3E%20%3F%0Aa%3A%20-3%20%20%20%20%20%20%20%20%20--%3E%20%3F%0Aa%3A%20-0.0%20%20%20%20%20%20%20--%3E%20%3F%0A*/%0Aconst%20x%20%3D%20true%20%3B%20//%20experiment%20with%20different%20values%20%0Aconst%20truthiness_x%20%3D%20Boolean%28x%29%3B%0A%0Alet%20result%3B%0Aif%20%28truthiness_x%29%20%7B%0A%20%20result%20%3D%20%22truthy%3A%20%22%20%2B%20typeof%20x%20%2B%20%22,%20%22%20%2B%20x%3B%0A%7D%20else%20%7B%0A%20%20result%20%3D%20%22falsey%3A%20%22%20%2B%20typeof%20x%20%2B%20%22,%20%22%20%2B%20x%3B%0A%7D%3B&curInstr=5&mode=display&origin=opt-frontend.js&py=js&rawInputLstJSON=%5B%5D)
 ```js
-a: true       --> ? * # true
+a: true       --> ? *  true
 
 const x = true ; // experiment with different values 
 const truthiness_x = Boolean(x);
@@ -48,12 +48,12 @@ if (truthiness_x) {
   result = "falsey: " + typeof x + ", " + x;
 };
 // ---
-# Global frame
+* Global frame
 x	true
 truthiness_x	true
 result	"truthy: boolean, true"
 ---
-a: false      --> ? * # false
+a: false      --> ? * false
 const x = false ; // experiment with different values 
 const truthiness_x = Boolean(x);
 
@@ -64,8 +64,14 @@ if (truthiness_x) {
   result = "falsey: " + typeof x + ", " + x;
   //
 };
+//---
+* Global frame
+x	false
+truthiness_x	false
+result	"falsey: boolean, false"
+
 ---
-a: 0          --> ?
+a: 0          --> ? * false
 
 const x = 0 ; // experiment with different values 
 const truthiness_x = Boolean(x);
@@ -77,9 +83,16 @@ if (truthiness_x) {
   result = "falsey: " + typeof x + ", " + x;
 };
 
+// ---
+* Global frame
+x	0
+truthiness_x	false
+result	"falsey: number, 0"
+
+
 ---
 
-a: 1           --> ?
+a: 1           --> ? * true
 const x = 1 ; // experiment with different values 
 const truthiness_x = Boolean(x);
 
@@ -89,8 +102,14 @@ if (truthiness_x) {
 } else {
   result = "falsey: " + typeof x + ", " + x;
 };
+//---
+* Global frame
+x	1
+truthiness_x	true
+result	"truthy: number, 1"
+
 ---
-a: null       --> ?
+a: null       --> ? * false
 const x = null ; // experiment with different values 
 const truthiness_x = Boolean(x);
 
@@ -100,8 +119,14 @@ if (truthiness_x) {
 } else {
   result = "falsey: " + typeof x + ", " + x;
 };
+// ---
+* Global frame
+x	null
+truthiness_x	false
+result	"falsey: object, null"
+
 ---
-a: undefined  --> ?
+a: undefined  --> ? * false
 
 const x = undefined ; // experiment with different values 
 const truthiness_x = Boolean(x);
@@ -112,8 +137,13 @@ if (truthiness_x) {
 } else {
   result = "falsey: " + typeof x + ", " + x;
 };
+//---
+* Global frame
+x	undefined
+truthiness_x	false
+result	"falsey: undefined, undefined"
 ---
-a: ''         --> ?
+a: ''         --> ? * false
 const x = '' ; // experiment with different values 
 const truthiness_x = Boolean(x);
 
@@ -123,8 +153,14 @@ if (truthiness_x) {
 } else {
   result = "falsey: " + typeof x + ", " + x;
 };
+//---
+* Global frame
+x	""
+truthiness_x	false
+result	"falsey: string, "
+
 ---
-a: ' '        --> ?
+a: ' '        --> ? true
 
 const x = ' ' ; // experiment with different values 
 const truthiness_x = Boolean(x);
@@ -135,9 +171,15 @@ if (truthiness_x) {
 } else {
   result = "falsey: " + typeof x + ", " + x;
 };
+//---
+* Global frame
+x	" "
+truthiness_x	true
+result	"truthy: string,  "
+
 
 ---
-a: 'tiil'     --> ?
+a: 'tiil'     --> ? * true
 const x = 'tiil' ; // experiment with different values 
 const truthiness_x = Boolean(x);
 
@@ -147,8 +189,14 @@ if (truthiness_x) {
 } else {
   result = "falsey: " + typeof x + ", " + x;
 };
+//---
+* Global frame
+x	"tiil"
+truthiness_x	true
+result	"truthy: string, tiil"
+
 ---
-a: 2          --> ?
+a: 2          --> ? * true
 const x = 2 ; // experiment with different values 
 const truthiness_x = Boolean(x);
 
@@ -158,8 +206,14 @@ if (truthiness_x) {
 } else {
   result = "falsey: " + typeof x + ", " + x;
 };
+//---
+* Global frame
+x	2
+truthiness_x	true
+result	"truthy: number, 2"
+
 ---
-a: 345        --> ?
+a: 345        --> ? * true
 const x = 345 ; // experiment with different values 
 const truthiness_x = Boolean(x);
 
@@ -169,8 +223,14 @@ if (truthiness_x) {
 } else {
   result = "falsey: " + typeof x + ", " + x;
 };
+//---
+* Global frame
+x	345
+truthiness_x	true
+result	"truthy: number, 345"
+
 ---
-a: NaN        --> ?
+a: NaN        --> ? * false
 const x = NaN ; // experiment with different values 
 const truthiness_x = Boolean(x);
 
@@ -180,8 +240,14 @@ if (truthiness_x) {
 } else {
   result = "falsey: " + typeof x + ", " + x;
 };
+//---
+* Global frame
+x	NaN
+truthiness_x	false
+result	"falsey: number, NaN"
+
 ---
-a: Infinity   --> ?
+a: Infinity   --> ? * true
 const x = Infinity ; // experiment with different values 
 const truthiness_x = Boolean(x);
 
@@ -191,8 +257,14 @@ if (truthiness_x) {
 } else {
   result = "falsey: " + typeof x + ", " + x;
 };
+//---
+* Global frame
+x	Infinity
+truthiness_x	true
+result	"truthy: number, Infinity"
+
 ---
-a: -Infinity  --> ?
+a: -Infinity  --> ? * true
 const x = -Infinity ; // experiment with different values 
 const truthiness_x = Boolean(x);
 
@@ -202,8 +274,13 @@ if (truthiness_x) {
 } else {
   result = "falsey: " + typeof x + ", " + x;
 };
+//---
+* Global frame
+x	-Infinity
+truthiness_x	true
+result	"truthy: number, -Infinity"
 ---
-a: -3         --> ?
+a: -3         --> ? * true
 const x = -3 ; // experiment with different values 
 const truthiness_x = Boolean(x);
 
@@ -213,8 +290,14 @@ if (truthiness_x) {
 } else {
   result = "falsey: " + typeof x + ", " + x;
 };
+//---
+* Global frame
+x	-3
+truthiness_x	true
+result	"truthy: number, -3"
+
 ---
-a: -0.0       --> ?
+a: -0.0       --> ? * false
 const x = true ; // experiment with different values 
 const truthiness_x = Boolean(x);
 
@@ -224,6 +307,12 @@ if (truthiness_x) {
 } else {
   result = "falsey: " + typeof x + ", " + x;
 };
+//---
+* Global frame
+x	0
+truthiness_x	false
+result	"falsey: number, 0"
+
 
 ```
 
@@ -309,23 +398,176 @@ Paste this in the console to learn about the ternary operator:
 ```
 Ternary operators can only have two options.  
 
-values to try:
+### values to try: # a: true 
+* My solution [on pytut](http://www.pythontutor.com/javascript.html#code=const%20x%20%3D%20true%20%3B%20//%20experiment%20with%20different%20values%20%0Aconst%20tern_value%20%3D%20%28x%29%20%3F%20%22truthy%22%20%3A%20%22falsey%22%20%3B%0A%0Aconst%20truthiness_x%20%3D%20Boolean%28x%29%3B%0A%0Aconst%20tern_truthiness%20%3D%20%28truthiness_x%29%20%3F%20%22truthy%22%20%3A%20%22falsey%22%20%3B%0Aconst%20tern_option%20%3D%20%28truthiness_x%29%20%3F%20%22first%22%20%3A%20%22second%22%20%3B%0Aconst%20tern_numbers%20%3D%20%28truthiness_x%29%20%3F%201%20%3A%202%20%3B%0A%20console.log%28%22x%3A%20%22%20%2B%20typeof%20x%20%2B%20%22,%20%22%20%2B%20x%29%3B%0A%20//%20console.log%28%22coerced%3A%20%22%20%2B%20coerce_truthiness%29%3B%0A%20%20//console.log%28%22ternaried%3A%20%22%20%2B%20ternary_truthiness%29%3B%0A%20%20console.log%28%22option%3A%20%22%20%2B%20tern_option%29%3B%0A%20%20console.log%28%22numbers%3A%20%22%20%2B%20tern_numbers%29%3B%0A%20%20console.log%28%22truthiness%3A%20%22%20%2B%20tern_truthiness%29%3B&curInstr=10&mode=display&origin=opt-frontend.js&py=js&rawInputLstJSON=%5B%5D)
 ```js
 a: true       --> ?
+const x = true ; // experiment with different values 
+const tern_value = (x) ? "truthy" : "falsey" ;
+
+const truthiness_x = Boolean(x);
+
+const tern_truthiness = (truthiness_x) ? "truthy" : "falsey" ;
+const tern_option = (truthiness_x) ? "first" : "second" ;
+const tern_numbers = (truthiness_x) ? 1 : 2 ;
+ console.log("x: " + typeof x + ", " + x);
+ // console.log("coerced: " + coerce_truthiness);
+  //console.log("ternaried: " + ternary_truthiness);
+  console.log("option: " + tern_option);
+  console.log("numbers: " + tern_numbers);
+  console.log("truthiness: " + tern_truthiness);
+//---
+* Global frame
+x	true
+tern_value	"truthy"
+truthiness_x	true
+tern_truthiness	"truthy"
+tern_option	"first"
+tern_numbers	1
+
+
+```
+---
+### values to try: # a: false
+* My solution [on pytut](http://www.pythontutor.com/javascript.html#code=const%20x%20%3D%20false%20%3B%20//%20experiment%20with%20different%20values%20%0Aconst%20tern_value%20%3D%20%28x%29%20%3F%20%22truthy%22%20%3A%20%22falsey%22%20%3B%0A%0Aconst%20truthiness_x%20%3D%20Boolean%28x%29%3B%0A%0Aconst%20tern_truthiness%20%3D%20%28truthiness_x%29%20%3F%20%22truthy%22%20%3A%20%22falsey%22%20%3B%0Aconst%20tern_option%20%3D%20%28truthiness_x%29%20%3F%20%22first%22%20%3A%20%22second%22%20%3B%0Aconst%20tern_numbers%20%3D%20%28truthiness_x%29%20%3F%201%20%3A%202%20%3B%0A%20console.log%28%22x%3A%20%22%20%2B%20typeof%20x%20%2B%20%22,%20%22%20%2B%20x%29%3B%0A%20//%20console.log%28%22coerced%3A%20%22%20%2B%20coerce_truthiness%29%3B%0A%20%20//console.log%28%22ternaried%3A%20%22%20%2B%20ternary_truthiness%29%3B%0A%20%20console.log%28%22option%3A%20%22%20%2B%20tern_option%29%3B%0A%20%20console.log%28%22numbers%3A%20%22%20%2B%20tern_numbers%29%3B%0A%20%20console.log%28%22truthiness%3A%20%22%20%2B%20tern_truthiness%29%3B&curInstr=10&mode=display&origin=opt-frontend.js&py=js&rawInputLstJSON=%5B%5D)
+```js
 a: false      --> ?
+const x = false ; // experiment with different values 
+const tern_value = (x) ? "truthy" : "falsey" ;
+
+const truthiness_x = Boolean(x);
+
+const tern_truthiness = (truthiness_x) ? "truthy" : "falsey" ;
+const tern_option = (truthiness_x) ? "first" : "second" ;
+const tern_numbers = (truthiness_x) ? 1 : 2 ;
+ console.log("x: " + typeof x + ", " + x);
+ // console.log("coerced: " + coerce_truthiness);
+  //console.log("ternaried: " + ternary_truthiness);
+  console.log("option: " + tern_option);
+  console.log("numbers: " + tern_numbers);
+  console.log("truthiness: " + tern_truthiness);
+ 
+```
+---
+### values to try: # a: 0 
+* My solution [on pytut](ttp://www.pythontutor.com/javascript.html#code=const%20x%20%3D%200%20%3B%20//%20experiment%20with%20different%20values%20%0Aconst%20tern_value%20%3D%20%28x%29%20%3F%20%22truthy%22%20%3A%20%22falsey%22%20%3B%0A%0Aconst%20truthiness_x%20%3D%20Boolean%28x%29%3B%0A%0Aconst%20tern_truthiness%20%3D%20%28truthiness_x%29%20%3F%20%22truthy%22%20%3A%20%22falsey%22%20%3B%0Aconst%20tern_option%20%3D%20%28truthiness_x%29%20%3F%20%22first%22%20%3A%20%22second%22%20%3B%0Aconst%20tern_numbers%20%3D%20%28truthiness_x%29%20%3F%201%20%3A%202%20%3B%0A%20console.log%28%22x%3A%20%22%20%2B%20typeof%20x%20%2B%20%22,%20%22%20%2B%20x%29%3B%0A%20//%20console.log%28%22coerced%3A%20%22%20%2B%20coerce_truthiness%29%3B%0A%20%20//console.log%28%22ternaried%3A%20%22%20%2B%20ternary_truthiness%29%3B%0A%20%20console.log%28%22option%3A%20%22%20%2B%20tern_option%29%3B%0A%20%20console.log%28%22numbers%3A%20%22%20%2B%20tern_numbers%29%3B%0A%20%20console.log%28%22truthiness%3A%20%22%20%2B%20tern_truthiness%29%3B&curInstr=10&mode=display&origin=opt-frontend.js&py=js&rawInputLstJSON=%5B%5D)
+```js
 a: 0          --> ?
+const x = 0 ; // experiment with different values 
+const tern_value = (x) ? "truthy" : "falsey" ;
+
+const truthiness_x = Boolean(x);
+
+const tern_truthiness = (truthiness_x) ? "truthy" : "falsey" ;
+const tern_option = (truthiness_x) ? "first" : "second" ;
+const tern_numbers = (truthiness_x) ? 1 : 2 ;
+ console.log("x: " + typeof x + ", " + x);
+ // console.log("coerced: " + coerce_truthiness);
+  //console.log("ternaried: " + ternary_truthiness);
+  console.log("option: " + tern_option);
+  console.log("numbers: " + tern_numbers);
+  console.log("truthiness: " + tern_truthiness);
+
+```
+---
+### values to try: # a: 1
+* My solution [on pytut](http://www.pythontutor.com/javascript.html#code=const%20x%20%3D%201%20%3B%20//%20experiment%20with%20different%20values%20%0Aconst%20tern_value%20%3D%20%28x%29%20%3F%20%22truthy%22%20%3A%20%22falsey%22%20%3B%0A%0Aconst%20truthiness_x%20%3D%20Boolean%28x%29%3B%0A%0Aconst%20tern_truthiness%20%3D%20%28truthiness_x%29%20%3F%20%22truthy%22%20%3A%20%22falsey%22%20%3B%0Aconst%20tern_option%20%3D%20%28truthiness_x%29%20%3F%20%22first%22%20%3A%20%22second%22%20%3B%0Aconst%20tern_numbers%20%3D%20%28truthiness_x%29%20%3F%201%20%3A%202%20%3B%0A%20console.log%28%22x%3A%20%22%20%2B%20typeof%20x%20%2B%20%22,%20%22%20%2B%20x%29%3B%0A%20//%20console.log%28%22coerced%3A%20%22%20%2B%20coerce_truthiness%29%3B%0A%20%20//console.log%28%22ternaried%3A%20%22%20%2B%20ternary_truthiness%29%3B%0A%20%20console.log%28%22option%3A%20%22%20%2B%20tern_option%29%3B%0A%20%20console.log%28%22numbers%3A%20%22%20%2B%20tern_numbers%29%3B%0A%20%20console.log%28%22truthiness%3A%20%22%20%2B%20tern_truthiness%29%3B&curInstr=10&mode=display&origin=opt-frontend.js&py=js&rawInputLstJSON=%5B%5D)
+```js
 a: 1          --> ?
+const x = 1 ; // experiment with different values 
+const tern_value = (x) ? "truthy" : "falsey" ;
+
+const truthiness_x = Boolean(x);
+
+const tern_truthiness = (truthiness_x) ? "truthy" : "falsey" ;
+const tern_option = (truthiness_x) ? "first" : "second" ;
+const tern_numbers = (truthiness_x) ? 1 : 2 ;
+ console.log("x: " + typeof x + ", " + x);
+ // console.log("coerced: " + coerce_truthiness);
+  //console.log("ternaried: " + ternary_truthiness);
+  console.log("option: " + tern_option);
+  console.log("numbers: " + tern_numbers);
+  console.log("truthiness: " + tern_truthiness);
+```
+---
+### values to try: # a: null
+* My solution [on pytut](http://www.pythontutor.com/javascript.html#code=const%20x%20%3D%20null%20%3B%20//%20experiment%20with%20different%20values%20%0Aconst%20tern_value%20%3D%20%28x%29%20%3F%20%22truthy%22%20%3A%20%22falsey%22%20%3B%0A%0Aconst%20truthiness_x%20%3D%20Boolean%28x%29%3B%0A%0Aconst%20tern_truthiness%20%3D%20%28truthiness_x%29%20%3F%20%22truthy%22%20%3A%20%22falsey%22%20%3B%0Aconst%20tern_option%20%3D%20%28truthiness_x%29%20%3F%20%22first%22%20%3A%20%22second%22%20%3B%0Aconst%20tern_numbers%20%3D%20%28truthiness_x%29%20%3F%201%20%3A%202%20%3B%0A%20console.log%28%22x%3A%20%22%20%2B%20typeof%20x%20%2B%20%22,%20%22%20%2B%20x%29%3B%0A%20//%20console.log%28%22coerced%3A%20%22%20%2B%20coerce_truthiness%29%3B%0A%20%20//console.log%28%22ternaried%3A%20%22%20%2B%20ternary_truthiness%29%3B%0A%20%20console.log%28%22option%3A%20%22%20%2B%20tern_option%29%3B%0A%20%20console.log%28%22numbers%3A%20%22%20%2B%20tern_numbers%29%3B%0A%20%20console.log%28%22truthiness%3A%20%22%20%2B%20tern_truthiness%29%3B&curInstr=10&mode=display&origin=opt-frontend.js&py=js&rawInputLstJSON=%5B%5D)
+```js
 a: null       --> ?
+
+```
+---
+### values to try: # a: undefined
+* My solution [on pytut](http://www.pythontutor.com/javascript.html#code=const%20x%20%3D%20undefined%20%3B%20//%20experiment%20with%20different%20values%20%0Aconst%20tern_value%20%3D%20%28x%29%20%3F%20%22truthy%22%20%3A%20%22falsey%22%20%3B%0A%0Aconst%20truthiness_x%20%3D%20Boolean%28x%29%3B%0A%0Aconst%20tern_truthiness%20%3D%20%28truthiness_x%29%20%3F%20%22truthy%22%20%3A%20%22falsey%22%20%3B%0Aconst%20tern_option%20%3D%20%28truthiness_x%29%20%3F%20%22first%22%20%3A%20%22second%22%20%3B%0Aconst%20tern_numbers%20%3D%20%28truthiness_x%29%20%3F%201%20%3A%202%20%3B%0A%20console.log%28%22x%3A%20%22%20%2B%20typeof%20x%20%2B%20%22,%20%22%20%2B%20x%29%3B%0A%20//%20console.log%28%22coerced%3A%20%22%20%2B%20coerce_truthiness%29%3B%0A%20%20//console.log%28%22ternaried%3A%20%22%20%2B%20ternary_truthiness%29%3B%0A%20%20console.log%28%22option%3A%20%22%20%2B%20tern_option%29%3B%0A%20%20console.log%28%22numbers%3A%20%22%20%2B%20tern_numbers%29%3B%0A%20%20console.log%28%22truthiness%3A%20%22%20%2B%20tern_truthiness%29%3B&curInstr=10&mode=display&origin=opt-frontend.js&py=js&rawInputLstJSON=%5B%5D)
+```js
 a: undefined  --> ?
+
+```
+---
+### values to try: # a: ''
+* My solution [on pytut](http://www.pythontutor.com/javascript.html#code=const%20x%20%3D%20''%20%3B%20//%20experiment%20with%20different%20values%20%0Aconst%20tern_value%20%3D%20%28x%29%20%3F%20%22truthy%22%20%3A%20%22falsey%22%20%3B%0A%0Aconst%20truthiness_x%20%3D%20Boolean%28x%29%3B%0A%0Aconst%20tern_truthiness%20%3D%20%28truthiness_x%29%20%3F%20%22truthy%22%20%3A%20%22falsey%22%20%3B%0Aconst%20tern_option%20%3D%20%28truthiness_x%29%20%3F%20%22first%22%20%3A%20%22second%22%20%3B%0Aconst%20tern_numbers%20%3D%20%28truthiness_x%29%20%3F%201%20%3A%202%20%3B%0A%20console.log%28%22x%3A%20%22%20%2B%20typeof%20x%20%2B%20%22,%20%22%20%2B%20x%29%3B%0A%20//%20console.log%28%22coerced%3A%20%22%20%2B%20coerce_truthiness%29%3B%0A%20%20//console.log%28%22ternaried%3A%20%22%20%2B%20ternary_truthiness%29%3B%0A%20%20console.log%28%22option%3A%20%22%20%2B%20tern_option%29%3B%0A%20%20console.log%28%22numbers%3A%20%22%20%2B%20tern_numbers%29%3B%0A%20%20console.log%28%22truthiness%3A%20%22%20%2B%20tern_truthiness%29%3B&curInstr=10&mode=display&origin=opt-frontend.js&py=js&rawInputLstJSON=%5B%5D)
+```js
 a: ''         --> ?
+```
+---
+### values to try: # a: ' ' 
+* My solution [on pytut](http://www.pythontutor.com/javascript.html#code=const%20x%20%3D%20'%20'%20%3B%20//%20experiment%20with%20different%20values%20%0Aconst%20tern_value%20%3D%20%28x%29%20%3F%20%22truthy%22%20%3A%20%22falsey%22%20%3B%0A%0Aconst%20truthiness_x%20%3D%20Boolean%28x%29%3B%0A%0Aconst%20tern_truthiness%20%3D%20%28truthiness_x%29%20%3F%20%22truthy%22%20%3A%20%22falsey%22%20%3B%0Aconst%20tern_option%20%3D%20%28truthiness_x%29%20%3F%20%22first%22%20%3A%20%22second%22%20%3B%0Aconst%20tern_numbers%20%3D%20%28truthiness_x%29%20%3F%201%20%3A%202%20%3B%0A%20console.log%28%22x%3A%20%22%20%2B%20typeof%20x%20%2B%20%22,%20%22%20%2B%20x%29%3B%0A%20//%20console.log%28%22coerced%3A%20%22%20%2B%20coerce_truthiness%29%3B%0A%20%20//console.log%28%22ternaried%3A%20%22%20%2B%20ternary_truthiness%29%3B%0A%20%20console.log%28%22option%3A%20%22%20%2B%20tern_option%29%3B%0A%20%20console.log%28%22numbers%3A%20%22%20%2B%20tern_numbers%29%3B%0A%20%20console.log%28%22truthiness%3A%20%22%20%2B%20tern_truthiness%29%3B&curInstr=10&mode=display&origin=opt-frontend.js&py=js&rawInputLstJSON=%5B%5D)
+```js
 a: ' '        --> ?
+```
+---
+### values to try: # a: 'tiil'
+* My solution [on pytut](http://www.pythontutor.com/javascript.html#code=const%20x%20%3D%20'tiil'%20%3B%20//%20experiment%20with%20different%20values%20%0Aconst%20tern_value%20%3D%20%28x%29%20%3F%20%22truthy%22%20%3A%20%22falsey%22%20%3B%0A%0Aconst%20truthiness_x%20%3D%20Boolean%28x%29%3B%0A%0Aconst%20tern_truthiness%20%3D%20%28truthiness_x%29%20%3F%20%22truthy%22%20%3A%20%22falsey%22%20%3B%0Aconst%20tern_option%20%3D%20%28truthiness_x%29%20%3F%20%22first%22%20%3A%20%22second%22%20%3B%0Aconst%20tern_numbers%20%3D%20%28truthiness_x%29%20%3F%201%20%3A%202%20%3B%0A%20console.log%28%22x%3A%20%22%20%2B%20typeof%20x%20%2B%20%22,%20%22%20%2B%20x%29%3B%0A%20//%20console.log%28%22coerced%3A%20%22%20%2B%20coerce_truthiness%29%3B%0A%20%20//console.log%28%22ternaried%3A%20%22%20%2B%20ternary_truthiness%29%3B%0A%20%20console.log%28%22option%3A%20%22%20%2B%20tern_option%29%3B%0A%20%20console.log%28%22numbers%3A%20%22%20%2B%20tern_numbers%29%3B%0A%20%20console.log%28%22truthiness%3A%20%22%20%2B%20tern_truthiness%29%3B&curInstr=10&mode=display&origin=opt-frontend.js&py=js&rawInputLstJSON=%5B%5D)
+```js
 a: 'tiil'     --> ?
+
+```
+---
+### values to try: # a: 2
+* My solution [on pytut](http://www.pythontutor.com/javascript.html#code=const%20x%20%3D%202%20%3B%20//%20experiment%20with%20different%20values%20%0Aconst%20tern_value%20%3D%20%28x%29%20%3F%20%22truthy%22%20%3A%20%22falsey%22%20%3B%0A%0Aconst%20truthiness_x%20%3D%20Boolean%28x%29%3B%0A%0Aconst%20tern_truthiness%20%3D%20%28truthiness_x%29%20%3F%20%22truthy%22%20%3A%20%22falsey%22%20%3B%0Aconst%20tern_option%20%3D%20%28truthiness_x%29%20%3F%20%22first%22%20%3A%20%22second%22%20%3B%0Aconst%20tern_numbers%20%3D%20%28truthiness_x%29%20%3F%201%20%3A%202%20%3B%0A%20console.log%28%22x%3A%20%22%20%2B%20typeof%20x%20%2B%20%22,%20%22%20%2B%20x%29%3B%0A%20//%20console.log%28%22coerced%3A%20%22%20%2B%20coerce_truthiness%29%3B%0A%20%20//console.log%28%22ternaried%3A%20%22%20%2B%20ternary_truthiness%29%3B%0A%20%20console.log%28%22option%3A%20%22%20%2B%20tern_option%29%3B%0A%20%20console.log%28%22numbers%3A%20%22%20%2B%20tern_numbers%29%3B%0A%20%20console.log%28%22truthiness%3A%20%22%20%2B%20tern_truthiness%29%3B&curInstr=10&mode=display&origin=opt-frontend.js&py=js&rawInputLstJSON=%5B%5D)
+```js
 a: 2          --> ?
+
+```
+---
+### values to try: # a: 345
+* My solution [on pytut](http://www.pythontutor.com/javascript.html#code=const%20x%20%3D%20345%20%3B%20//%20experiment%20with%20different%20values%20%0Aconst%20tern_value%20%3D%20%28x%29%20%3F%20%22truthy%22%20%3A%20%22falsey%22%20%3B%0A%0Aconst%20truthiness_x%20%3D%20Boolean%28x%29%3B%0A%0Aconst%20tern_truthiness%20%3D%20%28truthiness_x%29%20%3F%20%22truthy%22%20%3A%20%22falsey%22%20%3B%0Aconst%20tern_option%20%3D%20%28truthiness_x%29%20%3F%20%22first%22%20%3A%20%22second%22%20%3B%0Aconst%20tern_numbers%20%3D%20%28truthiness_x%29%20%3F%201%20%3A%202%20%3B%0A%20console.log%28%22x%3A%20%22%20%2B%20typeof%20x%20%2B%20%22,%20%22%20%2B%20x%29%3B%0A%20//%20console.log%28%22coerced%3A%20%22%20%2B%20coerce_truthiness%29%3B%0A%20%20//console.log%28%22ternaried%3A%20%22%20%2B%20ternary_truthiness%29%3B%0A%20%20console.log%28%22option%3A%20%22%20%2B%20tern_option%29%3B%0A%20%20console.log%28%22numbers%3A%20%22%20%2B%20tern_numbers%29%3B%0A%20%20console.log%28%22truthiness%3A%20%22%20%2B%20tern_truthiness%29%3B&curInstr=10&mode=display&origin=opt-frontend.js&py=js&rawInputLstJSON=%5B%5D)
+```js
 a: 345        --> ?
+
+```
+---
+### values to try: # a: NaN
+* My solution [on pytut](http://www.pythontutor.com/javascript.html#code=const%20x%20%3D%20NaN%20%3B%20//%20experiment%20with%20different%20values%20%0Aconst%20tern_value%20%3D%20%28x%29%20%3F%20%22truthy%22%20%3A%20%22falsey%22%20%3B%0A%0Aconst%20truthiness_x%20%3D%20Boolean%28x%29%3B%0A%0Aconst%20tern_truthiness%20%3D%20%28truthiness_x%29%20%3F%20%22truthy%22%20%3A%20%22falsey%22%20%3B%0Aconst%20tern_option%20%3D%20%28truthiness_x%29%20%3F%20%22first%22%20%3A%20%22second%22%20%3B%0Aconst%20tern_numbers%20%3D%20%28truthiness_x%29%20%3F%201%20%3A%202%20%3B%0A%20console.log%28%22x%3A%20%22%20%2B%20typeof%20x%20%2B%20%22,%20%22%20%2B%20x%29%3B%0A%20//%20console.log%28%22coerced%3A%20%22%20%2B%20coerce_truthiness%29%3B%0A%20%20//console.log%28%22ternaried%3A%20%22%20%2B%20ternary_truthiness%29%3B%0A%20%20console.log%28%22option%3A%20%22%20%2B%20tern_option%29%3B%0A%20%20console.log%28%22numbers%3A%20%22%20%2B%20tern_numbers%29%3B%0A%20%20console.log%28%22truthiness%3A%20%22%20%2B%20tern_truthiness%29%3B&curInstr=10&mode=display&origin=opt-frontend.js&py=js&rawInputLstJSON=%5B%5D)
+```js
 a: NaN        --> ?
+
+```
+---
+### values to try: # a: Infinity 
+* My solution [on pytut](http://www.pythontutor.com/javascript.html#code=const%20x%20%3D%20Infinity%20%3B%20//%20experiment%20with%20different%20values%20%0Aconst%20tern_value%20%3D%20%28x%29%20%3F%20%22truthy%22%20%3A%20%22falsey%22%20%3B%0A%0Aconst%20truthiness_x%20%3D%20Boolean%28x%29%3B%0A%0Aconst%20tern_truthiness%20%3D%20%28truthiness_x%29%20%3F%20%22truthy%22%20%3A%20%22falsey%22%20%3B%0Aconst%20tern_option%20%3D%20%28truthiness_x%29%20%3F%20%22first%22%20%3A%20%22second%22%20%3B%0Aconst%20tern_numbers%20%3D%20%28truthiness_x%29%20%3F%201%20%3A%202%20%3B%0A%20console.log%28%22x%3A%20%22%20%2B%20typeof%20x%20%2B%20%22,%20%22%20%2B%20x%29%3B%0A%20//%20console.log%28%22coerced%3A%20%22%20%2B%20coerce_truthiness%29%3B%0A%20%20//console.log%28%22ternaried%3A%20%22%20%2B%20ternary_truthiness%29%3B%0A%20%20console.log%28%22option%3A%20%22%20%2B%20tern_option%29%3B%0A%20%20console.log%28%22numbers%3A%20%22%20%2B%20tern_numbers%29%3B%0A%20%20console.log%28%22truthiness%3A%20%22%20%2B%20tern_truthiness%29%3B&curInstr=10&mode=display&origin=opt-frontend.js&py=js&rawInputLstJSON=%5B%5D)
+```js
 a: Infinity   --> ?
+
+```
+---
+### values to try: # a: -Infinity
+* My solution [on pytut](http://www.pythontutor.com/javascript.html#code=const%20x%20%3D%20-Infinity%20%3B%20//%20experiment%20with%20different%20values%20%0Aconst%20tern_value%20%3D%20%28x%29%20%3F%20%22truthy%22%20%3A%20%22falsey%22%20%3B%0A%0Aconst%20truthiness_x%20%3D%20Boolean%28x%29%3B%0A%0Aconst%20tern_truthiness%20%3D%20%28truthiness_x%29%20%3F%20%22truthy%22%20%3A%20%22falsey%22%20%3B%0Aconst%20tern_option%20%3D%20%28truthiness_x%29%20%3F%20%22first%22%20%3A%20%22second%22%20%3B%0Aconst%20tern_numbers%20%3D%20%28truthiness_x%29%20%3F%201%20%3A%202%20%3B%0A%20console.log%28%22x%3A%20%22%20%2B%20typeof%20x%20%2B%20%22,%20%22%20%2B%20x%29%3B%0A%20//%20console.log%28%22coerced%3A%20%22%20%2B%20coerce_truthiness%29%3B%0A%20%20//console.log%28%22ternaried%3A%20%22%20%2B%20ternary_truthiness%29%3B%0A%20%20console.log%28%22option%3A%20%22%20%2B%20tern_option%29%3B%0A%20%20console.log%28%22numbers%3A%20%22%20%2B%20tern_numbers%29%3B%0A%20%20console.log%28%22truthiness%3A%20%22%20%2B%20tern_truthiness%29%3B&curInstr=10&mode=display&origin=opt-frontend.js&py=js&rawInputLstJSON=%5B%5D)
+```js
 a: -Infinity  --> ?
+
+```
+---
+### values to try: # a: -3
+* My solution [on pytut](http://www.pythontutor.com/javascript.html#code=const%20x%20%3D%20-3%20%3B%20//%20experiment%20with%20different%20values%20%0Aconst%20tern_value%20%3D%20%28x%29%20%3F%20%22truthy%22%20%3A%20%22falsey%22%20%3B%0A%0Aconst%20truthiness_x%20%3D%20Boolean%28x%29%3B%0A%0Aconst%20tern_truthiness%20%3D%20%28truthiness_x%29%20%3F%20%22truthy%22%20%3A%20%22falsey%22%20%3B%0Aconst%20tern_option%20%3D%20%28truthiness_x%29%20%3F%20%22first%22%20%3A%20%22second%22%20%3B%0Aconst%20tern_numbers%20%3D%20%28truthiness_x%29%20%3F%201%20%3A%202%20%3B%0A%20console.log%28%22x%3A%20%22%20%2B%20typeof%20x%20%2B%20%22,%20%22%20%2B%20x%29%3B%0A%20//%20console.log%28%22coerced%3A%20%22%20%2B%20coerce_truthiness%29%3B%0A%20%20//console.log%28%22ternaried%3A%20%22%20%2B%20ternary_truthiness%29%3B%0A%20%20console.log%28%22option%3A%20%22%20%2B%20tern_option%29%3B%0A%20%20console.log%28%22numbers%3A%20%22%20%2B%20tern_numbers%29%3B%0A%20%20console.log%28%22truthiness%3A%20%22%20%2B%20tern_truthiness%29%3B&curInstr=10&mode=display&origin=opt-frontend.js&py=js&rawInputLstJSON=%5B%5D)
+```js
 a: -3         --> ?
+
+```
+---
+### values to try: # a: -0.0
+* My solution [on pytut](http://www.pythontutor.com/javascript.html#code=const%20x%20%3D%20-0.0%20%3B%20//%20experiment%20with%20different%20values%20%0Aconst%20tern_value%20%3D%20%28x%29%20%3F%20%22truthy%22%20%3A%20%22falsey%22%20%3B%0A%0Aconst%20truthiness_x%20%3D%20Boolean%28x%29%3B%0A%0Aconst%20tern_truthiness%20%3D%20%28truthiness_x%29%20%3F%20%22truthy%22%20%3A%20%22falsey%22%20%3B%0Aconst%20tern_option%20%3D%20%28truthiness_x%29%20%3F%20%22first%22%20%3A%20%22second%22%20%3B%0Aconst%20tern_numbers%20%3D%20%28truthiness_x%29%20%3F%201%20%3A%202%20%3B%0A%20console.log%28%22x%3A%20%22%20%2B%20typeof%20x%20%2B%20%22,%20%22%20%2B%20x%29%3B%0A%20//%20console.log%28%22coerced%3A%20%22%20%2B%20coerce_truthiness%29%3B%0A%20%20//console.log%28%22ternaried%3A%20%22%20%2B%20ternary_truthiness%29%3B%0A%20%20console.log%28%22option%3A%20%22%20%2B%20tern_option%29%3B%0A%20%20console.log%28%22numbers%3A%20%22%20%2B%20tern_numbers%29%3B%0A%20%20console.log%28%22truthiness%3A%20%22%20%2B%20tern_truthiness%29%3B&curInstr=10&mode=display&origin=opt-frontend.js&py=js&rawInputLstJSON=%5B%5D)
+```js
 a: -0.0       --> ?
 ```
 
