@@ -62,6 +62,22 @@ In JavaScript you can pass functions as arguments.  Since functions are referenc
   console.assert(result === 'eat ate tea', 'result === ' + result);
 }
 ```
+* My solution [on pytut 1](http://www.pythontutor.com/live.html#code=function%20sentence%28param_1%29%20%7B%0A%20%20var%20word_1%20%3D%20param_1%28%22t%22,%20%22e%22,%20%22a%22/*%20fill%20this%20*/%29%3B%0A%20%20var%20word_2%20%3D%20param_1%28%22e%22,%20%22a%22,%20%22t%22/*%20fill%20this%20*/%29%3B%0A%20%20var%20word_3%20%3D%20param_1%28%22a%22,%20%22t%22,%20%22e%22/*%20fill%20this%20*/%29%3B%0A%20%20return%20word_1%20%2B%20word_2%20%2B%20word_3%3B%0A%7D%0A%0Afunction%20first%28_1,%20_2,%20_3%29%20%7B%0A%20%20return%20_2%20%2B%20_3%20%2B%20_1%20%2B%20'%20'%3B%0A%7D%0Aconst%20result%20%3D%20sentence%28first%29%3B%0A%0Aconsole.assert%28result%20%3D%3D%3D%20'eat%20ate%20tea%20',%20'result%20%3D%3D%3D%20'%20%2B%20result%29%3B&cumulative=false&curInstr=13&heapPrimitives=nevernest&mode=display&origin=opt-live.js&py=js&rawInputLstJSON=%5B%5D&textReferences=false)
+```js
+function sentence(param_1) {
+  var word_1 = param_1("t", "e", "a"/* fill this */);
+  var word_2 = param_1("e", "a", "t"/* fill this */);
+  var word_3 = param_1("a", "t", "e"/* fill this */);
+  return word_1 + word_2 + word_3;
+}
+
+function first(_1, _2, _3) {
+  return _2 + _3 + _1 + ' ';
+}
+const result = sentence(first);
+
+console.assert(result === 'eat ate tea ', 'result === ' + result);
+```
 
 
 [TOP](#functions-as-arguments)
@@ -95,6 +111,29 @@ In JavaScript you can pass functions as arguments.  Since functions are referenc
   console.assert(result === 'eat ate tea', 'result === ' + result);
 }
 ```
+* My solution [on pytut 2](http://www.pythontutor.com/live.html#code=function%20sentence%28param_1,%20param_2,%20param_3%29%20%7B%0A%20%20var%20word_1%20%3D%20param_1%28't',%20'e',%20'a'/*%20fill%20this%20*/%29%3B%0A%20%20var%20word_2%20%3D%20param_2%28't',%20'e',%20'a'/*%20fill%20this%20*/%29%3B%0A%20%20var%20word_3%20%3D%20param_3%28't',%20'a',%20'e'/*%20fill%20this%20*/%29%3B%0A%20%20return%20word_1%20%2B%20word_2%20%2B%20word_3%3B%0A%7D%0A%0Afunction%20first%28_1,%20_2,%20_3%29%20%7B%0A%20%20return%20_2%20%2B%20_3%20%2B%20_1%20%2B%20'%20'%3B%0A%7D%0Afunction%20second%28_1,%20_2,%20_3%29%20%7B%0A%20%20return%20_3%20%2B%20_1%20%2B%20_2%20%2B%20'%20'%3B%0A%7D%0Afunction%20third%28_1,%20_2,%20_3%29%20%7B%0A%20%20return%20_1%20%2B%20_3%20%2B%20_2%3B%0A%7D%0A%0Aconst%20result%20%3D%20sentence%28first,%20second,%20third%29%3B%0A%0Aconsole.assert%28result%20%3D%3D%3D%20'eat%20ate%20tea',%20'result%20%3D%3D%3D%20'%20%2B%20result%29%3B&cumulative=false&curInstr=13&heapPrimitives=nevernest&mode=display&origin=opt-live.js&py=js&rawInputLstJSON=%5B%5D&textReferences=false)
+```js
+function sentence(param_1, param_2, param_3) {
+  var word_1 = param_1('t', 'e', 'a'/* fill this */);
+  var word_2 = param_2('t', 'e', 'a'/* fill this */);
+  var word_3 = param_3('t', 'a', 'e'/* fill this */);
+  return word_1 + word_2 + word_3;
+}
+
+function first(_1, _2, _3) {
+  return _2 + _3 + _1 + ' ';
+}
+function second(_1, _2, _3) {
+  return _3 + _1 + _2 + ' ';
+}
+function third(_1, _2, _3) {
+  return _1 + _3 + _2;
+}
+
+const result = sentence(first, second, third);
+
+console.assert(result === 'eat ate tea', 'result === ' + result);
+```
 
 [TOP](#functions-as-arguments)
 
@@ -127,6 +166,29 @@ In JavaScript you can pass functions as arguments.  Since functions are referenc
   console.assert(result === 'eat ate tea', 'result === ' + result);
 }
 ```
+* My solution [on pytut 3](http://www.pythontutor.com/live.html#code=function%20sentence%28param_1,%20param_2,%20param_3%29%20%7B%0A%20%20var%20word_1%20%3D%20param_1%28't',%20'a',%20'e'%29%3B%0A%20%20var%20word_2%20%3D%20param_2%28'e',%20't',%20'a'%29%3B%0A%20%20var%20word_3%20%3D%20param_3%28'a',%20't',%20'e'%29%3B%0A%20%20return%20word_1%20%2B%20word_2%20%2B%20word_3%3B%0A%7D%0A%0Afunction%20first%28_1,%20_2,%20_3%29%20%7B%0A%20%20return%20_3%20%2B%20_2%20%2B%20_1%20%2B%20'%20'%20/*%20fill%20this%20*/%3B%0A%7D%0Afunction%20second%28_1,%20_2,%20_3%29%20%7B%0A%20%20return%20_3%20%2B%20_2%20%2B%20_1%20%2B%20'%20'%20/*%20fill%20this%20*/%3B%0A%7D%0Afunction%20third%28_1,%20_2,%20_3%29%20%7B%0A%20%20return%20_2%20%2B%20_3%20%2B%20_1%20/*%20fill%20this%20*/%3B%0A%7D%0A%0Aconst%20result%20%3D%20sentence%28first,%20second,%20third%29%3B%0A%0Aconsole.assert%28result%20%3D%3D%3D%20'eat%20ate%20tea',%20'result%20%3D%3D%3D%20'%20%2B%20result%29%3B&cumulative=false&curInstr=13&heapPrimitives=nevernest&mode=display&origin=opt-live.js&py=js&rawInputLstJSON=%5B%5D&textReferences=false)
+```js
+function sentence(param_1, param_2, param_3) {
+  var word_1 = param_1('t', 'a', 'e');
+  var word_2 = param_2('e', 't', 'a');
+  var word_3 = param_3('a', 't', 'e');
+  return word_1 + word_2 + word_3;
+}
+
+function first(_1, _2, _3) {
+  return _3 + _2 + _1 + ' ' /* fill this */;
+}
+function second(_1, _2, _3) {
+  return _3 + _2 + _1 + ' ' /* fill this */;
+}
+function third(_1, _2, _3) {
+  return _2 + _3 + _1 /* fill this */;
+}
+
+const result = sentence(first, second, third);
+
+console.assert(result === 'eat ate tea', 'result === ' + result);
+```
 
 [TOP](#functions-as-arguments)
 
@@ -158,6 +220,29 @@ In JavaScript you can pass functions as arguments.  Since functions are referenc
 
   console.assert(result === 'eat ate tea', 'result === ' + result);
 }
+```
+* My solution [on pytut 4](http://www.pythontutor.com/live.html#code=function%20sentence%28param_1,%20param_2,%20param_3%29%20%7B%0A%20%20var%20word_1%20%3D%20param_1%28't',%20'a',%20'e'%29%3B%0A%20%20var%20word_2%20%3D%20param_2%28'e',%20't',%20'a'%29%3B%0A%20%20var%20word_3%20%3D%20param_3%28'a',%20't',%20'e'%29%3B%0A%20%20return%20word_1%20%2B%20word_2%20%2B%20word_3%3B%0A%7D%0A%0Afunction%20first%28_1,%20_2,%20_3%29%20%7B%0A%20%20return%20_3%20%2B%20_2%20%2B%20_1%20%2B%20'%20'%3B%0A%7D%0Afunction%20second%28_1,%20_2,%20_3%29%20%7B%0A%20%20return%20_3%20%2B%20_2%20%2B%20_1%20%2B%20'%20'%3B%0A%7D%0Afunction%20third%28_1,%20_2,%20_3%29%20%7B%0A%20%20return%20_2%20%2B%20_3%20%2B%20_1%3B%0A%7D%0A%0Aconst%20result%20%3D%20sentence%28first,%20second,%20third/*%20fill%20this%20*/%29%3B%0A%0Aconsole.assert%28result%20%3D%3D%3D%20'eat%20ate%20tea',%20'result%20%3D%3D%3D%20'%20%2B%20result%29%3B&cumulative=false&curInstr=13&heapPrimitives=nevernest&mode=display&origin=opt-live.js&py=js&rawInputLstJSON=%5B%5D&textReferences=false)
+```js
+function sentence(param_1, param_2, param_3) {
+  var word_1 = param_1('t', 'a', 'e');
+  var word_2 = param_2('e', 't', 'a');
+  var word_3 = param_3('a', 't', 'e');
+  return word_1 + word_2 + word_3;
+}
+
+function first(_1, _2, _3) {
+  return _3 + _2 + _1 + ' ';
+}
+function second(_1, _2, _3) {
+  return _3 + _2 + _1 + ' ';
+}
+function third(_1, _2, _3) {
+  return _2 + _3 + _1;
+}
+
+const result = sentence(first, second, third/* fill this */);
+
+console.assert(result === 'eat ate tea', 'result === ' + result);
 ```
 
 [TOP](#functions-as-arguments)
