@@ -263,13 +263,48 @@ console.log(spreadOut());
 
 ---
 ---
-##
+## Basic Data Structures: Check For The Presence of an Element With indexOf()
 ```js
+/*indexOf() can be incredibly useful for quickly checking for the presence of an element on an array. We have defined a function, quickCheck, that takes an array and an element as arguments. Modify the function using indexOf() so that it returns true if the passed element exists on the array, and false if it does not.
+
+quickCheck(["squash", "onions", "shallots"], "mushrooms") should return false
+quickCheck(["squash", "onions", "shallots"], "onions") should return true
+quickCheck([3, 5, 9, 125, 45, 2], 125) should return true
+quickCheck([true, false, false], undefined) should return false
+The quickCheck function should utilize the indexOf() method*/
+
+
+function quickCheck(arr, elem) {
+  // change code below this line
+return arr.indexOf(elem)!==-1;
+  // change code above this line
+}
+
+// change code here to test different cases:
+console.log(quickCheck(['squash', 'onions', 'shallots'], 'mushrooms'));
+
 ```
 ---
 ---
-##
+## Basic Data Structures: Iterate Through All an Array's Items Using For Loops
 ```js
+// SOLUTION
+
+function filteredArray(arr, elem) {
+  let newArr = [];
+  // change code below this line
+  
+ for (let i = 0; i < arr.length; i++) { 
+    if (arr[i].indexOf(elem)==-1){ //Checks every parameter for the element and if is NOT there continues the code
+          newArr.push(arr[i]); //Inserts the element of the array in the new filtered array
+            };
+          };
+
+  // change code above this line
+  return newArr;
+};
+// change code here to test different cases:
+console.log(filteredArray([[3, 2, 3], [1, 6, 3], [3, 13, 26], [19, 3, 9]], 3));
 ```
 ---
 ---
