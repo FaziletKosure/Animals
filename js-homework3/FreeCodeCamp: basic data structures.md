@@ -107,13 +107,58 @@ console.log(popShift(['challenge', 'is', 'not', 'complete']));
 ```
 ---
 ---
-##
+## Basic Data Structures: Remove Items Using splice()
 ```js
+/*We've defined a function, sumOfTen, which takes an array as an argument and returns the sum of that array's elements. Modify the function, using splice(), so that it returns a value of 10.
+sumOfTen should return 10
+The sumOfTen function should utilize the splice() method*/
+
+// do not change code below this lineconsole.log(sumOfTen([2, 5, 1, 5, 2, 1]));}     // change code above this line  return arr.reduce((a, b) => a + b);function sumOfTen(arr) {  // change code below this line
+function sumOfTen(arr) {
+  // change code below this line
+  
+  // change code above this line
+  return arr.reduce((a, b) => a + b);
+}
+
+// do not change code below this line
+console.log(sumOfTen([2, 5, 1, 5, 2, 1]));
+
+// SOLUTION
+
+function sumOfTen(arr) {
+  // change code below this line
+  arr.splice(1,2);
+  // change code above this line
+  return arr.reduce((a, b) => a + b);
+}
+
+// do not change code below this line
+console.log(sumOfTen([2, 5, 1, 5, 2, 1]));
+
 ```
 ---
 ---
-##
+## Basic Data Structures: Add Items Using splice()
 ```js
+/*We have defined a function, htmlColorNames, which takes an array of HTML colors as an argument. Modify the function using splice() to remove the first two elements of the array and add 'DarkSalmon' and 'BlanchedAlmond' in their respective places.
+htmlColorNames should return ["DarkSalmon", "BlanchedAlmond", "LavenderBlush", "PaleTurqoise", "FireBrick"]
+Passed
+The htmlColorNames function should utilize the splice() method
+Passed
+You should not use shift() or unshift().
+Passed
+You should not use array bracket notation.*/
+// SOLUTION
+function htmlColorNames(arr) {
+  // change code below this line
+  arr.splice(0, 2, 'DarkSalmon', 'BlanchedAlmond');
+  // change code above this line
+  return arr;
+} 
+ 
+// do not change code below this line
+console.log(htmlColorNames(['DarkGoldenRod', 'WhiteSmoke', 'LavenderBlush', 'PaleTurqoise', 'FireBrick']));
 ```
 ---
 ---
