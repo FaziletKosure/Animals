@@ -162,19 +162,105 @@ console.log(htmlColorNames(['DarkGoldenRod', 'WhiteSmoke', 'LavenderBlush', 'Pal
 ```
 ---
 ---
-##
+## Basic Data Structures: Copy Array Items Using slice()
 ```js
+/*We have defined a function, forecast, that takes an array as an argument. Modify the function using slice() to extract information from the argument array and return a new array that contains the elements 'warm' and 'sunny'.
+forecast should return ["warm", "sunny"]
+The forecast function should utilize the slice() method*/
+
+function forecast(arr) {
+  // change code below this line
+  
+  return arr;
+}
+
+// do not change code below this line
+console.log(forecast(['cold', 'rainy', 'warm', 'sunny', 'cool', 'thunderstorms']));
+
+// SOLUTION
+
+function forecast(arr) {
+  // change code below this line
+  var newArr = arr.slice(2, 4);
+  return newArr;
+}
+
+// do not change code below this line
+console.log(forecast(['cold', 'rainy', 'warm', 'sunny', 'cool', 'thunderstorms']));
 ```
 ---
 ---
-##
+## Basic Data Structures: Copy an Array with the Spread Operator
 ```js
+/*We have defined a function, copyMachine which takes arr (an array) and num (a number) as arguments. The function is supposed to return a new array made up of num copies of arr. We have done most of the work for you, but it doesn't work quite right yet. Modify the function using spread syntax so that it works correctly (hint: another method we have already covered might come in handy here!).*/
+/*
+copyMachine([true, false, true], 2) should return [[true, false, true], [true, false, true]]
+copyMachine([1, 2, 3], 5) should return [[1, 2, 3], [1, 2, 3], [1, 2, 3], [1, 2, 3], [1, 2, 3]]
+copyMachine([true, true, null], 1) should return [[true, true, null]]
+copyMachine(["it works"], 3) should return [["it works"], ["it works"], ["it works"]]
+The copyMachine function should utilize the spread operator with array arr
+*/
+
+function copyMachine(arr, num) {  let newArr = [];  while (num >= 1) {    // change code below this line     // change code above this line    num--;  }  return newArr;} // change code here to test different cases:console.log(copyMachine([true, false, true], 2));
+
+// change code here to test different cases:
+console.log(copyMachine([true, false, true], 2));
+
+// SOLUTION
+
+function copyMachine(arr, num) {
+  
+  let myArr = [];
+  let newArr = [...arr];
+  while (num >= 1) {
+    // change code below this line
+myArr.push(newArr);
+    // change code above this line
+    num--;
+  }
+  newArr = [...myArr];
+  return newArr;
+}
+
+// change code here to test different cases:
+console.log(copyMachine([true, false, true], 2));
+
+//
+function copyMachine(arr, num) {
+  let newArr = [];
+  while (num >= 1) {
+    // change code below this line
+newArr.push([...arr]);
+    // change code above this line
+    num--;
+  }
+  return newArr;
+}
+
+// change code here to test different cases:
+console.log(copyMachine([true, false, true], 2));
+
 ```
 ---
 ---
-##
+## Basic Data Structures: Combine Arrays with the Spread Operator
 ```js
+/*We have defined a function spreadOut that returns the variable sentence, modify the function using the spread operator so that it returns the array ['learning', 'to', 'code', 'is', 'fun'].
+
+spreadOut should return ["learning", "to", "code", "is", "fun"]
+Passed
+The spreadOut function should utilize spread syntax*/
+
+function spreadOut() {
+  let fragment = ['to', 'code'];
+  let sentence = ["learning", ...fragment, "is", "fun"]; // change this line
+  return sentence;
+}
+
+// do not change code below this line
+console.log(spreadOut());
 ```
+
 ---
 ---
 ##
