@@ -1,4 +1,4 @@
-   ### Introduction to the Basic Data Structure Challenges
+## Introduction to the Basic Data Structure Challenges
 ---
 ## Basic Data Structures: Use an Array to Store a Collection of Data
 ```js
