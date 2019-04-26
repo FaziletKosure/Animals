@@ -402,23 +402,151 @@ console.log(userActivity);
 ```
 ---
 ---
-##
+## Basic Data Structures: Access Property Names with Bracket Notation
 ```js
+/*We've defined a function, checkInventory, which receives a scanned item as an argument. Return the current value of the scannedItem key in the foods object. You can assume that only valid keys will be provided as an argument to checkInventory.
+checkInventory is a function
+The foods object should have only the following key-value pairs: apples: 25, oranges: 32, plums: 28, bananas: 13, grapes: 35, strawberries: 27
+checkInventory("apples") should return 25
+checkInventory("bananas") should return 13
+checkInventory("strawberries") should return 27
+*/
+
+// SOLUTION
+
+let foods = {
+  apples: 25,
+  oranges: 32,
+  plums: 28,
+  bananas: 13,
+  grapes: 35,
+  strawberries: 27
+};
+// do not change code above this line
+
+function checkInventory(scannedItem) {
+  // change code below this line
+return foods[scannedItem];
+}
+
+// change code below this line to test different cases:
+console.log(checkInventory("apples"));
 ```
 ---
 ---
-##
+## Basic Data Structures: Use the delete Keyword to Remove Object Properties
 ```js
+/*Use the delete keyword to remove the oranges, plums, and strawberries keys from the foods object.
+The foods object only has three keys: apples, grapes, and bananas
+The oranges, plums, and strawberries keys are removed using delete*/
+
+// SOLUTION
+
+let foods = {
+  apples: 25,
+  oranges: 32,
+  plums: 28,
+  bananas: 13,
+  grapes: 35,
+  strawberries: 27
+};
+
+// change code below this line
+delete foods.oranges;
+delete foods.plums;
+delete foods.strawberries;
+
+// change code above this line
+
+console.log(foods);
 ```
 ---
 ---
-##
+## Basic Data Structures: Check if an Object has a Property
 ```js
+/*We've created an object, users, with some users in it and a function isEveryoneHere, which we pass the users object to as an argument. Finish writing this function so that it returns true only if the users object contains all four names, Alan, Jeff, Sarah, and Ryan, as keys, and false otherwise.
+The users object only contains the keys Alan, Jeff, Sarah, and Ryan
+Passed
+The function isEveryoneHere returns true if Alan, Jeff, Sarah, and Ryan are properties on the users object
+Passed
+The function isEveryoneHere returns false if Alan, Jeff, Sarah, and Ryan are not properties on the users object */
+
+// SOLUTION
+
+let users = {
+  Alan: {
+    age: 27,
+    online: true
+  },
+  Jeff: {
+    age: 32,
+    online: true
+  },
+  Sarah: {
+    age: 48,
+    online: true
+  },
+  Ryan: {
+    age: 19,
+    online: true
+  }
+};
+
+function isEveryoneHere(obj) {
+  // change code below this line
+if(users.hasOwnProperty(obj) == 'Alan', 'Jeff', 'Sarah', 'Ryan' in users ) {
+  return true
+}
+else {
+  return false
+}
+  // change code above this line
+}
+
+console.log(isEveryoneHere(users));
 ```
 ---
 ---
-##
+## Basic Data Structures: Iterate Through the Keys of an Object with a for...in Statement
 ```js
+/*We've defined a function, countOnline; use a for...in statement within this function to loop through the users in the users object and return the number of users whose online property is set to true.
+The users object contains users Jeff and Ryan with online set to true and users Alan and Sarah with online set to false
+Passed
+The function countOnline returns the number of users with the online property set to true*/
+
+// SOLUTION
+
+let users = {
+  Alan: {
+    age: 27,
+    online: false
+  },
+  Jeff: {
+    age: 32,
+    online: true
+  },
+  Sarah: {
+    age: 48,
+    online: false
+  },
+  Ryan: {
+    age: 19,
+    online: true
+  }
+};
+
+function countOnline(obj) {
+    // change code below this line
+    var counter = 0;
+    for (var user in obj) {
+        if (obj[user]["online"] === true) {
+            counter++
+        }
+        // change code above this line
+
+    } return counter;
+}
+console.log(countOnline(users));
 ```
 ---
 ---
