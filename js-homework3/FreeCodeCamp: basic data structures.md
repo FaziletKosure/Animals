@@ -550,8 +550,47 @@ console.log(countOnline(users));
 ```
 ---
 ---
-##
+## Basic Data Structures: Generate an Array of All Object Keys with Object.keys()
 ```js
+/*Finish writing the getArrayOfUsers function so that it returns an array containing all the properties in the object it receives as an argument.
+The users object only contains the keys Alan, Jeff, Sarah, and Ryan
+The getArrayOfUsers function returns an array which contains all the keys in the users object
+*/
+
+// SOLUTION
+
+let users = {
+  Alan: {
+    age: 27,
+    online: false
+  },
+  Jeff: {
+    age: 32,
+    online: true
+  },
+  Sarah: {
+    age: 48,
+    online: false
+  },
+  Ryan: {
+    age: 19,
+    online: true
+  }
+};
+
+function getArrayOfUsers(obj) {
+// change code below this line
+var myArr = [];
+for(var user in obj){
+myArr.push(user); //Here I am also adding the first level keys (Alan, Jeff, Sarah and Ryan with each iteration.
+myArr.push((Object.keys(obj[user]))); //Here I am adding the keys of Alan, Jeff, Sarah and Ryan with each iteration
+}
+
+return myArr; //Returning the array to calling function.
+// change code above this line
+}
+
+console.log(getArrayOfUsers(users));
 ```
 ---
 ---
